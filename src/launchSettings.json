@@ -1,0 +1,20 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "simulationengine.api": "StartDebugging",
+        "tournament.api": "StartDebugging",
+        "webscrapingintegration.api": "StartDebugging",
+        "settings.api": "StartDebugging",
+        "result.api": "StartDebugging",
+        "processmanager.api": "StartDebugging",
+        "matchmanagment.api": "StartDebugging",
+        "logger.api": "StartDebugging",
+        "datahub.api": "StartDebugging",
+        "cache.api": "StartDebugging"
+      }
+    }
+  }
+}

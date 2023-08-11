@@ -1,0 +1,71 @@
+version: '3.4'
+
+services:
+  simulationengine.api:
+    image: ${DOCKER_REGISTRY-}simulationengineapi
+    build:
+      context: .
+      dockerfile: Services/SimulationEngine/SimulationEngine.API/Dockerfile
+
+  tournament.api:
+    image: ${DOCKER_REGISTRY-}tournamentapi
+    build:
+      context: .
+      dockerfile: Services/Tournament.API/Tournament.API/Dockerfile
+
+
+  webscrapingintegration.api:
+    image: ${DOCKER_REGISTRY-}webscrapingintegrationapi
+    build:
+      context: .
+      dockerfile: Services/WebScrapingIntegration/WebScrapingIntegration.API/Dockerfile
+
+
+  settings.api:
+    image: ${DOCKER_REGISTRY-}settingsapi
+    build:
+      context: .
+      dockerfile: Services/Settings/Settings.API/Dockerfile
+
+
+  result.api:
+    image: ${DOCKER_REGISTRY-}resultapi
+    build:
+      context: .
+      dockerfile: Services/Result/Result.API/Dockerfile
+
+
+  processmanager.api:
+    image: ${DOCKER_REGISTRY-}processmanagerapi
+    build:
+      context: .
+      dockerfile: Services/ProcessManager/ProcessManager.API/Dockerfile
+
+
+  matchmanagment.api:
+    image: ${DOCKER_REGISTRY-}matchmanagmentapi
+    build:
+      context: .
+      dockerfile: Services/MatchManagment/MatchManagment.API/Dockerfile
+
+
+  logger.api:
+    container_name: LoggerApi
+    image: ${DOCKER_REGISTRY-}loggerapi
+    build:
+      context: .
+      dockerfile: Services/Logger/Logger.API/Dockerfile
+    
+  datahub.api:
+    image: ${DOCKER_REGISTRY-}datahubapi
+    build:
+      context: .
+      dockerfile: Services/DataHub/DataHub.API/Dockerfile
+
+
+  cache.api:
+    image: ${DOCKER_REGISTRY-}cacheapi
+    build:
+      context: .
+      dockerfile: Services/Cache/Cache.API/Dockerfile
+
