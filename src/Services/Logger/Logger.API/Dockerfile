@@ -10,6 +10,7 @@ COPY ["Services/Logger/Logger.API/Logger.API.csproj", "Services/Logger/Logger.AP
 RUN dotnet restore "Services/Logger/Logger.API/Logger.API.csproj"
 COPY . .
 WORKDIR "/src/Services/Logger/Logger.API"
+ENV ConnectionStrings__YourDatabaseConnection="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=AppLog;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"
 RUN dotnet build "Logger.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
