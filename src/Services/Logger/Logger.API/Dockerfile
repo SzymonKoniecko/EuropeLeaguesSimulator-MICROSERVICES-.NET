@@ -20,3 +20,15 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Logger.API.dll"]
+
+FROM mcr.microsoft.com/mssql/server
+
+ENV ACCEPT_EULA=Y
+ENV SA_PASSWORD=Zaq1@wsx
+ENV SCRIPTS_FOLDER=/scripts
+
+COPY ./DatabaseScripts /scripts
+
+RUN /opt/mssql/bin/sqlservr --accept-eula & sleep 10 \
+    && for sqlfile in /DatabaseScripts/*.sql; do /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P $SA_PASSWORD -i $sqlfile; done \
+    && pkill sqlservr

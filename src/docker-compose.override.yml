@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  dbologger:
+  mssql-container:
     volumes:
       - sql-data:/var/opt/mssql
   
@@ -57,7 +57,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80"
+      - "8000:80"
 
 
   datahub.api:

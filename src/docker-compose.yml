@@ -1,14 +1,14 @@
 version: '3.4'
 
 services:
-  dbologger:
+  mssql-container:
     image: mcr.microsoft.com/mssql/server
-    container_name: dbologger
+    container_name: mssql-container
+    networks:
+    - tmpNetwork
     environment:
       SA_PASSWORD: Zaq1@wsx 
       ACCEPT_EULA: Y
-      SQL_USER: TwojLogin
-      SQL_PASSWORD: TwojeHaslo
     ports:
       - "1433:1433"   # Mapowanie portu kontenera na port hosta
 
@@ -61,11 +61,19 @@ services:
 
 
   logger.api:
-    container_name: LoggerApi
+    container_name: Logger.API
     image: ${DOCKER_REGISTRY-}loggerapi
     build:
       context: .
       dockerfile: Services/Logger/Logger.API/Dockerfile
+    environment:
+    - DB_HOST=mssql-container
+    - DB_NAME=Logger
+    - DB_SA_PASSWORD=Zaq1@wsx
+    networks:
+    - tmpNetwork
+  
+    
     
     
     
@@ -85,3 +93,5 @@ services:
   
 volumes:
     sql-data:
+networks:
+  tmpNetwork:

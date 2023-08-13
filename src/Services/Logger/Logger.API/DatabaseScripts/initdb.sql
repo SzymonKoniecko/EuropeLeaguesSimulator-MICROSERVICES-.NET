@@ -1,4 +1,8 @@
-CREATE TABLE AppLogs (
+CREATE DATABASE Logger;
+GO;
+USE Logger;
+GO;
+CREATE TABLE AppLogs(
     Id UNIQUEIDENTIFIER PRIMARY KEY not null,
     Application NVARCHAR(255),
     LoggedTime DATETIME,
@@ -8,3 +12,5 @@ CREATE TABLE AppLogs (
     Callsite NVARCHAR(255),
     Exception NVARCHAR(MAX)
 );
+GO;
+
