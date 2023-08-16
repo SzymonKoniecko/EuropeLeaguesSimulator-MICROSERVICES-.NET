@@ -30,6 +30,8 @@ services:
     build:
       context: .
       dockerfile: Services/WebScrapingIntegration/WebScrapingIntegration.API/Dockerfile
+    networks:
+    - tmpNetwork
 
 
   settings.api:
@@ -68,7 +70,7 @@ services:
       dockerfile: Services/Logger/Logger.API/Dockerfile
     environment:
     - DB_HOST=mssql-container
-    - DB_NAME=Logger
+    - DB_NAME_LOGGER=Logger
     - DB_SA_PASSWORD=Zaq1@wsx
     networks:
     - tmpNetwork
@@ -82,6 +84,12 @@ services:
     build:
       context: .
       dockerfile: Services/DataHub/DataHub.API/Dockerfile
+    environment:
+    - DB_HOST=mssql-container
+    - DB_NAME_DATAHUB=DataHub
+    - DB_SA_PASSWORD=Zaq1@wsx
+    networks:
+    - tmpNetwork
 
 
   cache.api:

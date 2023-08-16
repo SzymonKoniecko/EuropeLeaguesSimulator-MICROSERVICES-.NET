@@ -1,7 +1,4 @@
-﻿using Logger.API.Context;
-using Logger.API.Interfaces;
-using Logger.API.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,57 +8,23 @@ namespace Logger.API.Controllers
     [ApiController]
     public class LogController : ControllerBase
     {
-        private readonly IAppLogRepository _appLogRepository;
-        private readonly LoggerContext _loggerContext;
+        private readonly ILogger<LogController> _logger;
 
-        public LogController(IAppLogRepository appLogRepository, LoggerContext loggerContext)
+        public LogController(
+            ILogger<LogController> logger)
         {
-            _appLogRepository = appLogRepository;
-            _loggerContext = loggerContext;
+            _logger = logger;
         }
         // GET: api/<LogController>
         [HttpGet]
         public IEnumerable<string> Get()
         {
+            _logger.LogInformation("My Name is Mohammed Ahmed Hussien");
+            _logger.LogWarning("Please, can you check your app's performance");
+            _logger.LogError(new Exception(), "Booom, there is an exception");
+
+
             return new string[] { "value1", "value2" };
-        }
-
-        // GET api/<LogController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<LogController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<LogController>/5
-        [HttpPut]
-        public async Task<ActionResult> Put()
-        {
-            var obj = new AppLogDto()
-            {
-                Id = Guid.NewGuid(),
-                Application = "Logger",
-                LoggedTime = DateTime.Now,
-                Level = "info",
-                Message = "test",
-                Logger = "test",
-                Callsite = "test",
-                Exception = "test"
-
-            };
-            _appLogRepository.SaveLog(obj);
-            return Ok(_loggerContext.Database.CanConnect());
-        }
-        // DELETE api/<LogController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }

@@ -6,13 +6,14 @@ namespace DataHub.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TeamController : ControllerBase
+    public class ClubController : ControllerBase
     {
-        // GET: api/<TeamController>
-        [HttpGet]
-        public IEnumerable<string> Get([FromQuery] int id)
+        // GET: api/<ClubController>
+        [HttpGet(Name = "GetClubByName")]
+        public IEnumerable<string> GetClubByName([FromQuery] string query)
         {
-            return new string[] { id.ToString() };
+            return new string[] { "value1", "value2" };
         }
+
     }
 }
