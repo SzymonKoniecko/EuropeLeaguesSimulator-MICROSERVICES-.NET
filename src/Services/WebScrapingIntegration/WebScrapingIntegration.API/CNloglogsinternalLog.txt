@@ -1,0 +1,1219 @@
+2023-08-16 20:37:45.9609 Debug Message Template Auto Format enabled
+2023-08-16 20:37:46.0120 Debug Object reflection needed to resolve type: NLog.Targets.DatabaseTarget, NLog.Database
+2023-08-16 20:37:46.0602 Debug Object reflection needed to configure instance of type: NLog.Targets.DatabaseTarget
+2023-08-16 20:37:46.0769 Debug Object reflection needed to create instance of type: NLog.Targets.DatabaseParameterInfo
+2023-08-16 20:37:46.0952 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:46.1061 Trace Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2023-08-16 20:37:46.1220 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:46.1330 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-08-16 20:37:46.1435 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:46.1514 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-08-16 20:37:46.1675 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:46.1741 Trace Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2023-08-16 20:37:46.1839 Trace  Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2023-08-16 20:37:46.1916 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:46.1978 Trace Scanning StackTraceLayoutRenderer 'Layout Renderer: ${stacktrace}'
+2023-08-16 20:37:46.1978 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:46.2109 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2023-08-16 20:37:46.2203 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:46.2203 Trace Scanning AspNetRequestUrlRenderer 'Layout Renderer: ${aspnet-request-url}'
+2023-08-16 20:37:46.2319 Debug Adding target NLog.Targets.DatabaseTarget(Name=dbTarget)
+2023-08-16 20:37:46.2389 Info Registered target NLog.Targets.DatabaseTarget(Name=dbTarget)
+2023-08-16 20:37:46.2500 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:46.2500 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-08-16 20:37:46.2682 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:46.2682 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-08-16 20:37:46.2844 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:46.2920 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-08-16 20:37:46.3072 Debug Adding target NLog.Targets.ConsoleTarget(Name=consoleTarget)
+2023-08-16 20:37:46.3139 Info Registered target NLog.Targets.ConsoleTarget(Name=consoleTarget)
+2023-08-16 20:37:46.3220 Trace ParseRulesElement
+2023-08-16 20:37:46.4081 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.3.1999. Product version: 5.2.3+a5ddef92a8afb22508450803e37c001f4a3ba52a. GlobalAssemblyCache: False
+2023-08-16 20:37:46.4581 Debug Watching file-filter 'nlog.config' in directory: /app/bin/Debug/net7.0
+2023-08-16 20:37:46.4581 Debug --- NLog configuration dump ---
+2023-08-16 20:37:46.4758 Debug Targets:
+2023-08-16 20:37:46.4885 Debug DatabaseTarget(Name=dbTarget)
+2023-08-16 20:37:46.4985 Debug ConsoleTarget(Name=consoleTarget)
+2023-08-16 20:37:46.4985 Debug Rules:
+2023-08-16 20:37:46.5122 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ dbTarget ]
+2023-08-16 20:37:46.5176 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ consoleTarget ]
+2023-08-16 20:37:46.5176 Debug --- End of NLog configuration dump ---
+2023-08-16 20:37:46.5346 Trace FindReachableObject<System.Object>:
+2023-08-16 20:37:46.5430 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ dbTarget ]'
+2023-08-16 20:37:46.5506 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic.IList`1[NLog.Targets.Target]
+2023-08-16 20:37:46.5614 Trace  Scanning DatabaseTarget 'DatabaseTarget(Name=dbTarget)'
+2023-08-16 20:37:46.5805 Trace   Scanning Property ConnectionString 'Data Source=mssql-container;Initial Catalog=Logger;User ID=MicroservicesUser;Password=Zaq1@wsx;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;' NLog.Layouts.Layout
+2023-08-16 20:37:46.5805 Trace   Scanning SimpleLayout 'Data Source=mssql-container;Initial Catalog=Logger;User ID=MicroservicesUser;Password=Zaq1@wsx;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;'
+2023-08-16 20:37:46.5912 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:46.6017 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-16 20:37:46.6141 Trace   Scanning Property InstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseCommandInfo]
+2023-08-16 20:37:46.6267 Trace   Scanning Property InstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseCommandInfo]
+2023-08-16 20:37:46.6372 Trace   Scanning Property UninstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseCommandInfo]
+2023-08-16 20:37:46.6439 Trace   Scanning Property UninstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseCommandInfo]
+2023-08-16 20:37:46.6494 Trace   Scanning Property DBHost '.' NLog.Layouts.Layout
+2023-08-16 20:37:46.6494 Trace   Scanning SimpleLayout '.'
+2023-08-16 20:37:46.6612 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:46.6685 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-16 20:37:46.6685 Trace   Scanning Property CommandText 'INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)' NLog.Layouts.Layout
+2023-08-16 20:37:46.6852 Trace   Scanning SimpleLayout 'INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)'
+2023-08-16 20:37:46.6913 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:46.6984 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-16 20:37:46.6984 Trace   Scanning Property Parameters 'System.Collections.Generic.List`1[NLog.Targets.DatabaseParameterInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseParameterInfo]
+2023-08-16 20:37:46.7110 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-16 20:37:46.7176 Trace    Scanning Property Layout '${date}' NLog.Layouts.Layout
+2023-08-16 20:37:46.7176 Trace    Scanning SimpleLayout '${date}'
+2023-08-16 20:37:46.7277 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:46.7277 Trace     Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2023-08-16 20:37:46.7401 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-16 20:37:46.7401 Trace    Scanning Property Layout '${message}' NLog.Layouts.Layout
+2023-08-16 20:37:46.7530 Trace    Scanning SimpleLayout '${message}'
+2023-08-16 20:37:46.7577 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:46.7577 Trace     Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-08-16 20:37:46.7577 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-16 20:37:46.7721 Trace    Scanning Property Layout '${level}' NLog.Layouts.Layout
+2023-08-16 20:37:46.7721 Trace    Scanning SimpleLayout '${level}'
+2023-08-16 20:37:46.7802 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:46.7802 Trace     Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-08-16 20:37:46.7887 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-16 20:37:46.7887 Trace    Scanning Property Layout '${exception}' NLog.Layouts.Layout
+2023-08-16 20:37:46.7887 Trace    Scanning SimpleLayout '${exception}'
+2023-08-16 20:37:46.8006 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:46.8006 Trace     Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2023-08-16 20:37:46.8093 Trace      Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2023-08-16 20:37:46.8093 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-16 20:37:46.8184 Trace    Scanning Property Layout '${stacktrace}' NLog.Layouts.Layout
+2023-08-16 20:37:46.8184 Trace    Scanning SimpleLayout '${stacktrace}'
+2023-08-16 20:37:46.8184 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:46.8319 Trace     Scanning StackTraceLayoutRenderer 'Layout Renderer: ${stacktrace}'
+2023-08-16 20:37:46.8319 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-16 20:37:46.8410 Trace    Scanning Property Layout '${logger}' NLog.Layouts.Layout
+2023-08-16 20:37:46.8410 Trace    Scanning SimpleLayout '${logger}'
+2023-08-16 20:37:46.8509 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:46.8509 Trace     Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2023-08-16 20:37:46.8606 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-16 20:37:46.8606 Trace    Scanning Property Layout '${aspnet-request-url}' NLog.Layouts.Layout
+2023-08-16 20:37:46.8688 Trace    Scanning SimpleLayout '${aspnet-request-url}'
+2023-08-16 20:37:46.8688 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:46.8688 Trace     Scanning AspNetRequestUrlRenderer 'Layout Renderer: ${aspnet-request-url}'
+2023-08-16 20:37:46.8816 Trace   Scanning Property Parameters 'System.Collections.Generic.List`1[NLog.Targets.DatabaseParameterInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseParameterInfo]
+2023-08-16 20:37:46.8816 Trace   Scanning Property ConnectionProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseObjectPropertyInfo]
+2023-08-16 20:37:46.8905 Trace   Scanning Property ConnectionProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseObjectPropertyInfo]
+2023-08-16 20:37:46.8905 Trace   Scanning Property CommandProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseObjectPropertyInfo]
+2023-08-16 20:37:46.8994 Trace   Scanning Property CommandProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseObjectPropertyInfo]
+2023-08-16 20:37:46.8994 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic.IList`1[NLog.Config.LoggingRule]
+2023-08-16 20:37:46.9082 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic.IList`1[NLog.Filters.Filter]
+2023-08-16 20:37:46.9082 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ consoleTarget ]'
+2023-08-16 20:37:46.9082 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic.IList`1[NLog.Targets.Target]
+2023-08-16 20:37:46.9204 Trace  Scanning ConsoleTarget 'ConsoleTarget(Name=consoleTarget)'
+2023-08-16 20:37:46.9204 Trace   Scanning Property Layout '${longdate} level=${level} message=${message}' NLog.Layouts.Layout
+2023-08-16 20:37:46.9285 Trace   Scanning SimpleLayout '${longdate} level=${level} message=${message}'
+2023-08-16 20:37:46.9285 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:46.9285 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-08-16 20:37:46.9397 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-16 20:37:46.9397 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-08-16 20:37:46.9486 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-16 20:37:46.9486 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-08-16 20:37:46.9579 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic.IList`1[NLog.Config.LoggingRule]
+2023-08-16 20:37:46.9579 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic.IList`1[NLog.Filters.Filter]
+2023-08-16 20:37:46.9678 Info Validating config: TargetNames=dbTarget, consoleTarget, ConfigItems=37, FilePath=/app/bin/Debug/net7.0/nlog.config
+2023-08-16 20:37:46.9678 Debug Unused target checking is started... Rule Count: 2, Target Count: 2
+2023-08-16 20:37:46.9810 Debug Unused target checking is completed. Total Rule Count: 2, Total Target Count: 2, Unused Target Count: 0
+2023-08-16 20:37:46.9810 Trace Initializing Layout Renderer: ${message}
+2023-08-16 20:37:46.9898 Trace Initializing Layout Renderer: ${literal}
+2023-08-16 20:37:46.9898 Trace Initializing Layout Renderer: ${level}
+2023-08-16 20:37:46.9984 Trace Initializing Layout Renderer: ${literal}
+2023-08-16 20:37:46.9984 Trace Initializing Layout Renderer: ${longdate}
+2023-08-16 20:37:46.9984 Trace Initializing ${longdate} level=${level} message=${message}
+2023-08-16 20:37:47.0113 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:47.0113 Trace Scanning SimpleLayout '${longdate} level=${level} message=${message}'
+2023-08-16 20:37:47.0190 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:47.0190 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-08-16 20:37:47.0190 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-16 20:37:47.0305 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-08-16 20:37:47.0305 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-16 20:37:47.0380 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-08-16 20:37:47.0380 Trace Initializing ConsoleTarget(Name=consoleTarget)
+2023-08-16 20:37:47.0482 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-08-16 20:37:47.0482 Trace Scanning ConsoleTarget 'ConsoleTarget(Name=consoleTarget)'
+2023-08-16 20:37:47.0482 Trace  Scanning Property Layout '${longdate} level=${level} message=${message}' NLog.Layouts.Layout
+2023-08-16 20:37:47.0627 Trace ConsoleTarget(Name=consoleTarget) has 1 layouts
+2023-08-16 20:37:47.0740 Trace Initializing Layout Renderer: ${aspnet-request-url}
+2023-08-16 20:37:47.0838 Trace Initializing ${aspnet-request-url}
+2023-08-16 20:37:47.0882 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:47.0882 Trace Scanning SimpleLayout '${aspnet-request-url}'
+2023-08-16 20:37:47.0882 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:47.1011 Trace  Scanning AspNetRequestUrlRenderer 'Layout Renderer: ${aspnet-request-url}'
+2023-08-16 20:37:47.1011 Trace Initializing Layout Renderer: ${loggername}
+2023-08-16 20:37:47.1096 Trace Initializing ${logger}
+2023-08-16 20:37:47.1096 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:47.1187 Trace Scanning SimpleLayout '${logger}'
+2023-08-16 20:37:47.1187 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:47.1187 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2023-08-16 20:37:47.1339 Trace Initializing Layout Renderer: ${stacktrace}
+2023-08-16 20:37:47.1406 Trace Initializing ${stacktrace}
+2023-08-16 20:37:47.1406 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:47.1507 Trace Scanning SimpleLayout '${stacktrace}'
+2023-08-16 20:37:47.1507 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:47.1600 Trace  Scanning StackTraceLayoutRenderer 'Layout Renderer: ${stacktrace}'
+2023-08-16 20:37:47.1600 Trace Initializing Layout Renderer: ${exception}
+2023-08-16 20:37:47.1600 Trace Initializing ${exception}
+2023-08-16 20:37:47.1702 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:47.1702 Trace Scanning SimpleLayout '${exception}'
+2023-08-16 20:37:47.1799 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:47.1799 Trace  Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2023-08-16 20:37:47.1884 Trace   Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2023-08-16 20:37:47.1884 Trace Initializing Layout Renderer: ${level}
+2023-08-16 20:37:47.1884 Trace Initializing ${level}
+2023-08-16 20:37:47.1998 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:47.1998 Trace Scanning SimpleLayout '${level}'
+2023-08-16 20:37:47.2076 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:47.2076 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-08-16 20:37:47.2076 Trace Initializing Layout Renderer: ${message}
+2023-08-16 20:37:47.2194 Trace Initializing ${message}
+2023-08-16 20:37:47.2194 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:47.2194 Trace Scanning SimpleLayout '${message}'
+2023-08-16 20:37:47.2309 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:47.2309 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-08-16 20:37:47.2389 Trace Initializing Layout Renderer: ${date}
+2023-08-16 20:37:47.2389 Trace Initializing ${date}
+2023-08-16 20:37:47.2389 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:47.2499 Trace Scanning SimpleLayout '${date}'
+2023-08-16 20:37:47.2499 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:47.2581 Trace  Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2023-08-16 20:37:47.2581 Trace Initializing Layout Renderer: ${literal}
+2023-08-16 20:37:47.2581 Trace Initializing INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:37:47.2693 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:47.2693 Trace Scanning SimpleLayout 'INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)'
+2023-08-16 20:37:47.2693 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:47.2820 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-16 20:37:47.2820 Trace Initializing Layout Renderer: ${literal}
+2023-08-16 20:37:47.2913 Trace Initializing .
+2023-08-16 20:37:47.2913 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:47.3009 Trace Scanning SimpleLayout '.'
+2023-08-16 20:37:47.3009 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:47.3126 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-16 20:37:47.3126 Trace Initializing Layout Renderer: ${literal}
+2023-08-16 20:37:47.3221 Trace Initializing Data Source=mssql-container;Initial Catalog=Logger;User ID=MicroservicesUser;Password=Zaq1@wsx;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;
+2023-08-16 20:37:47.3221 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:47.3309 Trace Scanning SimpleLayout 'Data Source=mssql-container;Initial Catalog=Logger;User ID=MicroservicesUser;Password=Zaq1@wsx;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;'
+2023-08-16 20:37:47.3309 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:47.3384 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-16 20:37:47.3384 Trace Initializing DatabaseTarget(Name=dbTarget)
+2023-08-16 20:37:47.3384 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-08-16 20:37:47.3510 Trace Scanning DatabaseTarget 'DatabaseTarget(Name=dbTarget)'
+2023-08-16 20:37:47.3510 Trace  Scanning Property ConnectionString 'Data Source=mssql-container;Initial Catalog=Logger;User ID=MicroservicesUser;Password=Zaq1@wsx;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;' NLog.Layouts.Layout
+2023-08-16 20:37:47.3590 Trace  Scanning Property InstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseCommandInfo]
+2023-08-16 20:37:47.3590 Trace  Scanning Property InstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseCommandInfo]
+2023-08-16 20:37:47.3590 Trace  Scanning Property UninstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseCommandInfo]
+2023-08-16 20:37:47.3704 Trace  Scanning Property UninstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseCommandInfo]
+2023-08-16 20:37:47.3704 Trace  Scanning Property DBHost '.' NLog.Layouts.Layout
+2023-08-16 20:37:47.3783 Trace  Scanning Property CommandText 'INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)' NLog.Layouts.Layout
+2023-08-16 20:37:47.3783 Trace  Scanning Property Parameters 'System.Collections.Generic.List`1[NLog.Targets.DatabaseParameterInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseParameterInfo]
+2023-08-16 20:37:47.3783 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-16 20:37:47.3890 Trace   Scanning Property Layout '${date}' NLog.Layouts.Layout
+2023-08-16 20:37:47.3890 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-16 20:37:47.3890 Trace   Scanning Property Layout '${message}' NLog.Layouts.Layout
+2023-08-16 20:37:47.4001 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-16 20:37:47.4001 Trace   Scanning Property Layout '${level}' NLog.Layouts.Layout
+2023-08-16 20:37:47.4001 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-16 20:37:47.4116 Trace   Scanning Property Layout '${exception}' NLog.Layouts.Layout
+2023-08-16 20:37:47.4116 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-16 20:37:47.4190 Trace   Scanning Property Layout '${stacktrace}' NLog.Layouts.Layout
+2023-08-16 20:37:47.4190 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-16 20:37:47.4190 Trace   Scanning Property Layout '${logger}' NLog.Layouts.Layout
+2023-08-16 20:37:47.4313 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-16 20:37:47.4313 Trace   Scanning Property Layout '${aspnet-request-url}' NLog.Layouts.Layout
+2023-08-16 20:37:47.4387 Trace  Scanning Property Parameters 'System.Collections.Generic.List`1[NLog.Targets.DatabaseParameterInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseParameterInfo]
+2023-08-16 20:37:47.4387 Trace  Scanning Property ConnectionProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseObjectPropertyInfo]
+2023-08-16 20:37:47.4387 Trace  Scanning Property ConnectionProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseObjectPropertyInfo]
+2023-08-16 20:37:47.4490 Trace  Scanning Property CommandProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseObjectPropertyInfo]
+2023-08-16 20:37:47.4490 Trace  Scanning Property CommandProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseObjectPropertyInfo]
+2023-08-16 20:37:47.4580 Trace DatabaseTarget(Name=dbTarget) has 10 layouts
+2023-08-16 20:37:47.5081 Warn DatabaseTarget(Name=dbTarget): Failed to load assembly 'Microsoft.Data.SqlClient'. Falling back to 'System.Data.SqlClient'. Exception: System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.Data.SqlClient, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'Microsoft.Data.SqlClient, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at NLog.Targets.DatabaseTarget.SetConnectionType()
+2023-08-16 20:37:47.6470 Info Configuration initialized.
+2023-08-16 20:37:47.6552 Debug Targets configured when LogLevel >= Trace for Logger: Program
+2023-08-16 20:37:47.6592 Debug Logger Program [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:47.6592 Debug Logger Program [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:47.6592 Debug Logger Program [Info] => dbTarget consoleTarget
+2023-08-16 20:37:47.6697 Debug Logger Program [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:47.6697 Debug Logger Program [Error] => dbTarget consoleTarget
+2023-08-16 20:37:47.6697 Debug Logger Program [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:47.9542 Debug Hide assemblies for callsite
+2023-08-16 20:37:47.9585 Debug Skip loading NLogLoggingConfiguration from empty config section: NLog
+2023-08-16 20:37:47.9585 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2023-08-16 20:37:47.9700 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:47.9700 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:47.9700 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Info] => dbTarget consoleTarget
+2023-08-16 20:37:47.9794 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:47.9794 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => dbTarget consoleTarget
+2023-08-16 20:37:47.9794 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:47.9913 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2023-08-16 20:37:47.9913 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:47.9978 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:47.9978 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Info] => dbTarget consoleTarget
+2023-08-16 20:37:47.9978 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.0082 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.0082 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:48.0082 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Hosting.Lifetime
+2023-08-16 20:37:48.0189 Debug Logger Microsoft.Hosting.Lifetime [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:48.0189 Debug Logger Microsoft.Hosting.Lifetime [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:48.0189 Debug Logger Microsoft.Hosting.Lifetime [Info] => dbTarget consoleTarget
+2023-08-16 20:37:48.0285 Debug Logger Microsoft.Hosting.Lifetime [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.0285 Debug Logger Microsoft.Hosting.Lifetime [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.0285 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:48.0472 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer
+2023-08-16 20:37:48.0507 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:48.0507 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:48.0507 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Info] => dbTarget consoleTarget
+2023-08-16 20:37:48.0607 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.0607 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.0607 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:48.0707 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware
+2023-08-16 20:37:48.0707 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:48.0707 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:48.0803 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Info] => dbTarget consoleTarget
+2023-08-16 20:37:48.0803 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.0877 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.0877 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:48.0877 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.Kestrel
+2023-08-16 20:37:48.0982 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:48.0982 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:48.0982 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Info] => dbTarget consoleTarget
+2023-08-16 20:37:48.1083 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.1083 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.1083 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:48.1182 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.Kestrel.BadRequests
+2023-08-16 20:37:48.1182 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:48.1182 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:48.1280 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Info] => dbTarget consoleTarget
+2023-08-16 20:37:48.1280 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.1280 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.1381 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:48.1381 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2023-08-16 20:37:48.1381 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:48.1482 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:48.1482 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Info] => dbTarget consoleTarget
+2023-08-16 20:37:48.1482 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.1586 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.1586 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:48.1586 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.Kestrel.Http2
+2023-08-16 20:37:48.1692 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:48.1692 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:48.1692 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Info] => dbTarget consoleTarget
+2023-08-16 20:37:48.1794 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.1794 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.1794 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:48.1896 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.Kestrel.Http3
+2023-08-16 20:37:48.1896 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:48.1896 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:48.1998 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Info] => dbTarget consoleTarget
+2023-08-16 20:37:48.1998 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.1998 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.2102 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:48.2195 Debug Targets configured when LogLevel >= Trace for Logger: WebScrapingIntegration.API
+2023-08-16 20:37:48.2195 Debug Logger WebScrapingIntegration.API [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:48.2195 Debug Logger WebScrapingIntegration.API [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:48.2303 Debug Logger WebScrapingIntegration.API [Info] => dbTarget consoleTarget
+2023-08-16 20:37:48.2303 Debug Logger WebScrapingIntegration.API [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.2376 Debug Logger WebScrapingIntegration.API [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.2376 Debug Logger WebScrapingIntegration.API [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:48.2541 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2023-08-16 20:37:48.2576 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:48.2576 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:48.2576 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Info] => dbTarget consoleTarget
+2023-08-16 20:37:48.2679 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.2679 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.2679 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:48.3138 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider
+2023-08-16 20:37:48.3138 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:48.3206 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:48.3206 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Info] => dbTarget consoleTarget
+2023-08-16 20:37:48.3206 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.3305 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.3305 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:48.3401 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory
+2023-08-16 20:37:48.3401 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:48.3401 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:48.3499 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Info] => dbTarget consoleTarget
+2023-08-16 20:37:48.3499 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.3499 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.3597 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:48.3783 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:37:48.6601 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:37:48.6724 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:37:48.367' (String)
+2023-08-16 20:37:48.6724 Trace   DatabaseTarget: Parameter: '@msg' = 'Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider' (String)
+2023-08-16 20:37:48.6801 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:37:48.6801 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:37:48.6895 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-16 20:37:48.6895 Trace Scanning SimpleLayout ' => '
+2023-08-16 20:37:48.6895 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-16 20:37:48.7005 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-16 20:37:48.7005 Trace   DatabaseTarget: Parameter: '@trace' = 'CallSiteVisitor`2.VisitCallSite => CallSiteRuntimeResolver.VisitRootCache => CallSiteVisitor`2.VisitCallSiteMain' (String)
+2023-08-16 20:37:48.7100 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory' (String)
+2023-08-16 20:37:48.7100 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:37:48.7201 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory
+2023-08-16 20:37:48.7201 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:37:48.7509 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:37:48.7509 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:37:48.7633 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2023-08-16 20:37:48.7633 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:48.7703 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:48.7703 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Info] => dbTarget consoleTarget
+2023-08-16 20:37:48.7786 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.7786 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.7786 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:48.7916 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:37:48.7916 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:48.7984 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:48.7984 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Info] => dbTarget consoleTarget
+2023-08-16 20:37:48.7984 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.8092 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.8092 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:48.8480 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:37:48.8480 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:37:48.8480 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:37:48.848' (String)
+2023-08-16 20:37:48.8603 Trace   DatabaseTarget: Parameter: '@msg' = 'Hosting starting' (String)
+2023-08-16 20:37:48.8603 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:37:48.8603 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:37:48.8707 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <RunAsync>d__4.MoveNext => Host.StartAsync' (String)
+2023-08-16 20:37:48.8707 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.Extensions.Hosting.Internal.Host' (String)
+2023-08-16 20:37:48.8779 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:37:48.8779 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.Extensions.Hosting.Internal.Host
+2023-08-16 20:37:48.8779 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:37:48.8979 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:37:48.8979 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:37:48.8979 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2023-08-16 20:37:48.9099 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:48.9099 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:48.9099 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Info] => dbTarget consoleTarget
+2023-08-16 20:37:48.9191 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.9191 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.9191 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:48.9425 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2023-08-16 20:37:48.9425 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:48.9501 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:48.9501 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Info] => dbTarget consoleTarget
+2023-08-16 20:37:48.9501 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.9603 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.9603 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:48.9758 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware
+2023-08-16 20:37:48.9791 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:48.9791 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:48.9791 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Info] => dbTarget consoleTarget
+2023-08-16 20:37:48.9893 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:48.9893 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Error] => dbTarget consoleTarget
+2023-08-16 20:37:48.9893 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:49.0190 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2023-08-16 20:37:49.0190 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:49.0190 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:49.0289 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Info] => dbTarget consoleTarget
+2023-08-16 20:37:49.0289 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:49.0289 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Error] => dbTarget consoleTarget
+2023-08-16 20:37:49.0381 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:49.0381 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware
+2023-08-16 20:37:49.0499 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:49.0499 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:49.0499 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Info] => dbTarget consoleTarget
+2023-08-16 20:37:49.0597 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:49.0597 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Error] => dbTarget consoleTarget
+2023-08-16 20:37:49.0597 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:49.0692 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware
+2023-08-16 20:37:49.0692 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:49.0692 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:49.0793 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Info] => dbTarget consoleTarget
+2023-08-16 20:37:49.0793 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:49.0793 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Error] => dbTarget consoleTarget
+2023-08-16 20:37:49.0895 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:49.1026 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets
+2023-08-16 20:37:49.1026 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Trace] => dbTarget consoleTarget
+2023-08-16 20:37:49.1026 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Debug] => dbTarget consoleTarget
+2023-08-16 20:37:49.1091 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Info] => dbTarget consoleTarget
+2023-08-16 20:37:49.1091 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Warn] => dbTarget consoleTarget
+2023-08-16 20:37:49.1091 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Error] => dbTarget consoleTarget
+2023-08-16 20:37:49.1091 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Fatal] => dbTarget consoleTarget
+2023-08-16 20:37:49.1279 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:37:49.1279 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:37:49.1279 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:37:49.127' (String)
+2023-08-16 20:37:49.1390 Trace   DatabaseTarget: Parameter: '@msg' = 'Now listening on: http://[::]:80' (String)
+2023-08-16 20:37:49.1390 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-16 20:37:49.1390 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:37:49.1487 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <StartAsync>d__12.MoveNext => GenericWebHostService.StartAsync' (String)
+2023-08-16 20:37:49.1487 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.Hosting.Lifetime' (String)
+2023-08-16 20:37:49.1487 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:37:49.1591 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.Hosting.Lifetime
+2023-08-16 20:37:49.1591 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:37:49.1752 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:37:49.1785 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:37:49.1785 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:37:49.1785 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:37:49.1888 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:37:49.178' (String)
+2023-08-16 20:37:49.1888 Trace   DatabaseTarget: Parameter: '@msg' = 'Loaded hosting startup assembly WebScrapingIntegration.API' (String)
+2023-08-16 20:37:49.1888 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:37:49.1993 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:37:49.1993 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <StartAsync>d__12.MoveNext => GenericWebHostService.StartAsync' (String)
+2023-08-16 20:37:49.1993 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Hosting.Diagnostics' (String)
+2023-08-16 20:37:49.2106 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:37:49.2106 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2023-08-16 20:37:49.2181 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:37:49.2322 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:37:49.2322 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:37:49.2407 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:37:49.2407 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:37:49.2483 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:37:49.240' (String)
+2023-08-16 20:37:49.2483 Trace   DatabaseTarget: Parameter: '@msg' = 'Application started. Press Ctrl+C to shut down.' (String)
+2023-08-16 20:37:49.2483 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-16 20:37:49.2594 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:37:49.2594 Trace   DatabaseTarget: Parameter: '@trace' = 'CancellationTokenSource.ExecuteCallbackHandlers => ExecutionContext.RunInternal => ConsoleLifetime.OnApplicationStarted' (String)
+2023-08-16 20:37:49.2594 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.Hosting.Lifetime' (String)
+2023-08-16 20:37:49.2699 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:37:49.2699 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.Hosting.Lifetime
+2023-08-16 20:37:49.2699 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:37:49.2888 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:37:49.2888 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:37:49.2976 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:37:49.2976 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:37:49.2976 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:37:49.297' (String)
+2023-08-16 20:37:49.3093 Trace   DatabaseTarget: Parameter: '@msg' = 'Hosting environment: Development' (String)
+2023-08-16 20:37:49.3093 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-16 20:37:49.3093 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:37:49.3190 Trace   DatabaseTarget: Parameter: '@trace' = 'CancellationTokenSource.ExecuteCallbackHandlers => ExecutionContext.RunInternal => ConsoleLifetime.OnApplicationStarted' (String)
+2023-08-16 20:37:49.3190 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.Hosting.Lifetime' (String)
+2023-08-16 20:37:49.3190 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:37:49.3296 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.Hosting.Lifetime
+2023-08-16 20:37:49.3296 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:37:49.3443 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:37:49.3477 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:37:49.3477 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:37:49.3477 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:37:49.3587 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:37:49.347' (String)
+2023-08-16 20:37:49.3587 Trace   DatabaseTarget: Parameter: '@msg' = 'Content root path: /app' (String)
+2023-08-16 20:37:49.3587 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-16 20:37:49.3683 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:37:49.3683 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <StartAsync>d__12.MoveNext => ApplicationLifetime.NotifyStarted' (String)
+2023-08-16 20:37:49.3683 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.Hosting.Lifetime' (String)
+2023-08-16 20:37:49.3791 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:37:49.3791 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.Hosting.Lifetime
+2023-08-16 20:37:49.3791 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:37:49.3985 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:37:49.3985 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:37:49.3985 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:37:49.4100 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:37:49.4100 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:37:49.398' (String)
+2023-08-16 20:37:49.4100 Trace   DatabaseTarget: Parameter: '@msg' = 'Hosting started' (String)
+2023-08-16 20:37:49.4195 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:37:49.4195 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:37:49.4195 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <RunAsync>d__4.MoveNext => Host.StartAsync' (String)
+2023-08-16 20:37:49.4295 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.Extensions.Hosting.Internal.Host' (String)
+2023-08-16 20:37:49.4295 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:37:49.4295 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.Extensions.Hosting.Internal.Host
+2023-08-16 20:37:49.4392 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:37:49.4514 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:37:49.4514 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:07.5790 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:07.5790 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:07.5790 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:07.579' (String)
+2023-08-16 20:38:07.5790 Trace   DatabaseTarget: Parameter: '@msg' = 'Connection id "0HMSUJ2PDGB62" received FIN.' (String)
+2023-08-16 20:38:07.5790 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:07.5893 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:07.5893 Trace   DatabaseTarget: Parameter: '@trace' = 'SocketConnectionContextFactory.Create => SocketConnection.Start => SocketConnection.DoReceive' (String)
+2023-08-16 20:38:07.5893 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets' (String)
+2023-08-16 20:38:07.5893 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:07.5893 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets
+2023-08-16 20:38:07.5988 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:07.6103 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:07.6103 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:07.6193 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:07.6193 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:07.6193 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:07.619' (String)
+2023-08-16 20:38:07.6193 Trace   DatabaseTarget: Parameter: '@msg' = 'Connection id "0HMSUJ2PDGB62" accepted.' (String)
+2023-08-16 20:38:07.6277 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:07.6277 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:07.6277 Trace   DatabaseTarget: Parameter: '@trace' = 'SocketAsyncEngine.System.Threading.IThreadPoolWorkItem.Execute => AwaitableSocketAsyncEventArgs.OnCompleted => AwaitableSocketAsyncEventArgs.InvokeContinuation' (String)
+2023-08-16 20:38:07.6277 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Server.Kestrel.Connections' (String)
+2023-08-16 20:38:07.6277 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:07.6277 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2023-08-16 20:38:07.6381 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:07.6381 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:07.6485 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:07.6485 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:07.6485 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:07.6485 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:07.648' (String)
+2023-08-16 20:38:07.6589 Trace   DatabaseTarget: Parameter: '@msg' = 'Connection id "0HMSUJ2PDGB62" started.' (String)
+2023-08-16 20:38:07.6589 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:07.6589 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:07.6589 Trace   DatabaseTarget: Parameter: '@trace' = 'ThreadPoolWorkQueue.Dispatch => KestrelConnection`1.System.Threading.IThreadPoolWorkItem.Execute => KestrelConnection`1.ExecuteAsync' (String)
+2023-08-16 20:38:07.6589 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Server.Kestrel.Connections' (String)
+2023-08-16 20:38:07.6682 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:07.6682 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2023-08-16 20:38:07.6682 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:07.6838 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:07.6838 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:07.6878 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:07.6878 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:07.6878 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:07.648' (String)
+2023-08-16 20:38:07.6878 Trace   DatabaseTarget: Parameter: '@msg' = 'Connection id "0HMSUJ2PDGB63" accepted.' (String)
+2023-08-16 20:38:07.6878 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:07.6980 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:07.6980 Trace   DatabaseTarget: Parameter: '@trace' = 'SocketAsyncEngine.System.Threading.IThreadPoolWorkItem.Execute => AwaitableSocketAsyncEventArgs.OnCompleted => AwaitableSocketAsyncEventArgs.InvokeContinuation' (String)
+2023-08-16 20:38:07.6980 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Server.Kestrel.Connections' (String)
+2023-08-16 20:38:07.6980 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:07.6980 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2023-08-16 20:38:07.6980 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:07.7155 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:07.7176 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:07.7176 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:07.7442 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:07.7442 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:07.698' (String)
+2023-08-16 20:38:07.7507 Trace   DatabaseTarget: Parameter: '@msg' = 'Connection id "0HMSUJ2PDGB62" sending FIN because: "The Socket transport's send loop completed gracefully."' (String)
+2023-08-16 20:38:07.7507 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:07.7507 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:07.7599 Trace   DatabaseTarget: Parameter: '@trace' = 'Http1OutputProducer.Abort => SocketConnection.Abort => SocketConnection.Shutdown' (String)
+2023-08-16 20:38:07.7599 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets' (String)
+2023-08-16 20:38:07.7599 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:07.7690 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets
+2023-08-16 20:38:07.7690 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:07.7851 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:07.7883 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:07.7883 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:07.7883 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:07.7982 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:07.717' (String)
+2023-08-16 20:38:07.7982 Trace   DatabaseTarget: Parameter: '@msg' = 'Connection id "0HMSUJ2PDGB63" started.' (String)
+2023-08-16 20:38:07.7982 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:07.7982 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:07.8108 Trace   DatabaseTarget: Parameter: '@trace' = 'ThreadPoolWorkQueue.Dispatch => KestrelConnection`1.System.Threading.IThreadPoolWorkItem.Execute => KestrelConnection`1.ExecuteAsync' (String)
+2023-08-16 20:38:07.8108 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Server.Kestrel.Connections' (String)
+2023-08-16 20:38:07.8108 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:07.8199 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2023-08-16 20:38:07.8199 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:07.8321 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:07.8321 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:07.8379 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:07.8379 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:07.8379 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:07.788' (String)
+2023-08-16 20:38:07.8379 Trace   DatabaseTarget: Parameter: '@msg' = 'Connection id "0HMSUJ2PDGB62" disconnecting.' (String)
+2023-08-16 20:38:07.8505 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:07.8505 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:07.8505 Trace   DatabaseTarget: Parameter: '@trace' = 'HttpConnection.OnConnectionClosed => Http1Connection.Microsoft.AspNetCore.Server.Kestrel.Core.Internal.IRequestProcessor.OnInputOrOutputCompleted => Http1OutputProducer.Abort' (String)
+2023-08-16 20:38:07.8630 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Server.Kestrel.Connections' (String)
+2023-08-16 20:38:07.8630 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:07.8687 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2023-08-16 20:38:07.8687 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:07.8843 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:07.8843 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:07.8902 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:07.8902 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:07.8902 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:07.863' (String)
+2023-08-16 20:38:07.8995 Trace   DatabaseTarget: Parameter: '@msg' = 'Request starting HTTP/1.1 POST http://localhost:8002/api/ClubScraping?query=United - 0' (String)
+2023-08-16 20:38:07.8995 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-16 20:38:07.8995 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:07.9084 Trace   DatabaseTarget: Parameter: '@trace' = 'HostingApplication.CreateContext => HostingApplicationDiagnostics.BeginRequest => HostingApplicationDiagnostics.LogRequestStarting' (String)
+2023-08-16 20:38:07.9084 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Hosting.Diagnostics' (String)
+2023-08-16 20:38:07.9084 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:07.9084 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2023-08-16 20:38:07.9205 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:07.9331 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:07.9331 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:07.9398 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:07.9398 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:07.9398 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:07.890' (String)
+2023-08-16 20:38:07.9487 Trace   DatabaseTarget: Parameter: '@msg' = 'Connection id "0HMSUJ2PDGB62" stopped.' (String)
+2023-08-16 20:38:07.9487 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:07.9487 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:07.9487 Trace   DatabaseTarget: Parameter: '@trace' = 'ThreadPoolWorkQueue.Dispatch => KestrelConnection`1.System.Threading.IThreadPoolWorkItem.Execute => KestrelConnection`1.ExecuteAsync' (String)
+2023-08-16 20:38:07.9605 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Server.Kestrel.Connections' (String)
+2023-08-16 20:38:07.9605 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:07.9605 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2023-08-16 20:38:07.9690 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:07.9802 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:07.9802 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:07.9802 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:07.9899 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:07.9899 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:07.939' (String)
+2023-08-16 20:38:07.9899 Trace   DatabaseTarget: Parameter: '@msg' = 'Wildcard detected, all requests with hosts will be allowed.' (String)
+2023-08-16 20:38:07.9990 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:07.9990 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:07.9990 Trace   DatabaseTarget: Parameter: '@trace' = '<ProcessRequests>d__238`1.MoveNext => HostFilteringMiddleware.Invoke => HostFilteringMiddleware.Configure' (String)
+2023-08-16 20:38:08.0079 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware' (String)
+2023-08-16 20:38:08.0079 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.0079 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware
+2023-08-16 20:38:08.0079 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.0283 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.0283 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.0283 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.0380 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.0380 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.028' (String)
+2023-08-16 20:38:08.0380 Trace   DatabaseTarget: Parameter: '@msg' = 'All hosts are allowed.' (String)
+2023-08-16 20:38:08.0380 Trace   DatabaseTarget: Parameter: '@level' = 'Trace' (String)
+2023-08-16 20:38:08.0503 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.0503 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <ProcessRequests>d__238`1.MoveNext => HostFilteringMiddleware.Invoke' (String)
+2023-08-16 20:38:08.0503 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware' (String)
+2023-08-16 20:38:08.0594 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.0594 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware
+2023-08-16 20:38:08.0594 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.0763 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.0798 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.0976 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Routing.Matching.DfaMatcher
+2023-08-16 20:38:08.0976 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Trace] => dbTarget consoleTarget
+2023-08-16 20:38:08.0976 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Debug] => dbTarget consoleTarget
+2023-08-16 20:38:08.0976 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Info] => dbTarget consoleTarget
+2023-08-16 20:38:08.1100 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Warn] => dbTarget consoleTarget
+2023-08-16 20:38:08.1100 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Error] => dbTarget consoleTarget
+2023-08-16 20:38:08.1100 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Fatal] => dbTarget consoleTarget
+2023-08-16 20:38:08.1219 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.1219 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.1285 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.121' (String)
+2023-08-16 20:38:08.1285 Trace   DatabaseTarget: Parameter: '@msg' = '1 candidate(s) found for the request path '/api/ClubScraping'' (String)
+2023-08-16 20:38:08.1285 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:08.1285 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.1404 Trace   DatabaseTarget: Parameter: '@trace' = '<Invoke>d__10.MoveNext => EndpointRoutingMiddleware.Invoke => DfaMatcher.MatchAsync' (String)
+2023-08-16 20:38:08.1404 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Routing.Matching.DfaMatcher' (String)
+2023-08-16 20:38:08.1404 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.1498 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Routing.Matching.DfaMatcher
+2023-08-16 20:38:08.1498 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.1721 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.1721 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.1826 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.1826 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.1899 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.182' (String)
+2023-08-16 20:38:08.1899 Trace   DatabaseTarget: Parameter: '@msg' = 'Endpoint 'WebScrapingIntegration.API.Controllers.ClubScrapingController.GetTeamByName (WebScrapingIntegration.API)' with route pattern 'api/ClubScraping' is valid for the request path '/api/ClubScraping'' (String)
+2023-08-16 20:38:08.1899 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:08.1991 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.1991 Trace   DatabaseTarget: Parameter: '@trace' = '<Invoke>d__10.MoveNext => EndpointRoutingMiddleware.Invoke => DfaMatcher.MatchAsync' (String)
+2023-08-16 20:38:08.1991 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Routing.Matching.DfaMatcher' (String)
+2023-08-16 20:38:08.2090 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.2090 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Routing.Matching.DfaMatcher
+2023-08-16 20:38:08.2090 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.2278 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.2278 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.2278 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.2384 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.2384 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.227' (String)
+2023-08-16 20:38:08.2384 Trace   DatabaseTarget: Parameter: '@msg' = 'Request matched endpoint 'WebScrapingIntegration.API.Controllers.ClubScrapingController.GetTeamByName (WebScrapingIntegration.API)'' (String)
+2023-08-16 20:38:08.2384 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:08.2506 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.2506 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <Invoke>d__10.MoveNext => EndpointRoutingMiddleware.Invoke' (String)
+2023-08-16 20:38:08.2506 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware' (String)
+2023-08-16 20:38:08.2596 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.2596 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2023-08-16 20:38:08.2596 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.2835 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.2835 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.3004 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.3004 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.3004 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.300' (String)
+2023-08-16 20:38:08.3102 Trace   DatabaseTarget: Parameter: '@msg' = 'Static files was skipped as the request already matched an endpoint.' (String)
+2023-08-16 20:38:08.3102 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:08.3102 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.3188 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <Invoke>d__5.MoveNext => StaticFileMiddleware.Invoke' (String)
+2023-08-16 20:38:08.3188 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware' (String)
+2023-08-16 20:38:08.3188 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.3278 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware
+2023-08-16 20:38:08.3278 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.3416 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.3416 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.3511 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.3511 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.3578 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.351' (String)
+2023-08-16 20:38:08.3578 Trace   DatabaseTarget: Parameter: '@msg' = 'Executing endpoint 'WebScrapingIntegration.API.Controllers.ClubScrapingController.GetTeamByName (WebScrapingIntegration.API)'' (String)
+2023-08-16 20:38:08.3578 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-16 20:38:08.3578 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.3697 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <Invoke>d__9.MoveNext => EndpointMiddleware.Invoke' (String)
+2023-08-16 20:38:08.3697 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Routing.EndpointMiddleware' (String)
+2023-08-16 20:38:08.3697 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.3790 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2023-08-16 20:38:08.3790 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.3941 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.3941 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.4022 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter
+2023-08-16 20:38:08.4022 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Trace] => dbTarget consoleTarget
+2023-08-16 20:38:08.4083 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Debug] => dbTarget consoleTarget
+2023-08-16 20:38:08.4083 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Info] => dbTarget consoleTarget
+2023-08-16 20:38:08.4083 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Warn] => dbTarget consoleTarget
+2023-08-16 20:38:08.4083 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Error] => dbTarget consoleTarget
+2023-08-16 20:38:08.4203 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Fatal] => dbTarget consoleTarget
+2023-08-16 20:38:08.4203 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter
+2023-08-16 20:38:08.4203 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Trace] => dbTarget consoleTarget
+2023-08-16 20:38:08.4295 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Debug] => dbTarget consoleTarget
+2023-08-16 20:38:08.4295 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Info] => dbTarget consoleTarget
+2023-08-16 20:38:08.4295 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Warn] => dbTarget consoleTarget
+2023-08-16 20:38:08.4385 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Error] => dbTarget consoleTarget
+2023-08-16 20:38:08.4385 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Fatal] => dbTarget consoleTarget
+2023-08-16 20:38:08.4568 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder
+2023-08-16 20:38:08.4604 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Trace] => dbTarget consoleTarget
+2023-08-16 20:38:08.4604 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Debug] => dbTarget consoleTarget
+2023-08-16 20:38:08.4604 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Info] => dbTarget consoleTarget
+2023-08-16 20:38:08.4695 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Warn] => dbTarget consoleTarget
+2023-08-16 20:38:08.4695 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Error] => dbTarget consoleTarget
+2023-08-16 20:38:08.4695 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Fatal] => dbTarget consoleTarget
+2023-08-16 20:38:08.4829 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.4829 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.4897 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.482' (String)
+2023-08-16 20:38:08.4897 Trace   DatabaseTarget: Parameter: '@msg' = 'Route matched with {action = "GetTeamByName", controller = "ClubScraping"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebScrapingIntegration.API.Models.ClubDetails]]] GetTeamByName(System.String) on controller WebScrapingIntegration.API.Controllers.ClubScrapingController (WebScrapingIntegration.API).' (String)
+2023-08-16 20:38:08.4897 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-16 20:38:08.4988 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.4988 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <<InvokeAsync>g__Logged|17_1>d.MoveNext => Log.ExecutingAction' (String)
+2023-08-16 20:38:08.4988 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:08.5079 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.5079 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:08.5079 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.5373 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.5406 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.5406 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.5486 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.5486 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.540' (String)
+2023-08-16 20:38:08.5486 Trace   DatabaseTarget: Parameter: '@msg' = 'Execution plan of authorization filters (in the following order): None' (String)
+2023-08-16 20:38:08.5577 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:08.5577 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.5577 Trace   DatabaseTarget: Parameter: '@trace' = 'EndpointMiddleware.Invoke => ResourceInvoker.InvokeAsync => ResourceInvoker.<InvokeAsync>g__Logged|17_1' (String)
+2023-08-16 20:38:08.5577 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:08.5700 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.5700 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:08.5700 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.5874 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.5896 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.5896 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.5896 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.5896 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.589' (String)
+2023-08-16 20:38:08.5980 Trace   DatabaseTarget: Parameter: '@msg' = 'Execution plan of resource filters (in the following order): None' (String)
+2023-08-16 20:38:08.5980 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:08.5980 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.5980 Trace   DatabaseTarget: Parameter: '@trace' = 'EndpointMiddleware.Invoke => ResourceInvoker.InvokeAsync => ResourceInvoker.<InvokeAsync>g__Logged|17_1' (String)
+2023-08-16 20:38:08.5980 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:08.6079 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.6079 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:08.6079 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.6211 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.6211 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.6211 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.6277 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.6277 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.621' (String)
+2023-08-16 20:38:08.6277 Trace   DatabaseTarget: Parameter: '@msg' = 'Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)' (String)
+2023-08-16 20:38:08.6277 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:08.6277 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.6277 Trace   DatabaseTarget: Parameter: '@trace' = 'EndpointMiddleware.Invoke => ResourceInvoker.InvokeAsync => ResourceInvoker.<InvokeAsync>g__Logged|17_1' (String)
+2023-08-16 20:38:08.6382 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:08.6382 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.6382 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:08.6382 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.6613 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.6613 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.6613 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.6677 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.6677 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.661' (String)
+2023-08-16 20:38:08.6677 Trace   DatabaseTarget: Parameter: '@msg' = 'Execution plan of exception filters (in the following order): None' (String)
+2023-08-16 20:38:08.6677 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:08.6677 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.6677 Trace   DatabaseTarget: Parameter: '@trace' = 'EndpointMiddleware.Invoke => ResourceInvoker.InvokeAsync => ResourceInvoker.<InvokeAsync>g__Logged|17_1' (String)
+2023-08-16 20:38:08.6791 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:08.6791 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.6791 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:08.6791 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.6943 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.6943 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.6987 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.6987 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.6987 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.698' (String)
+2023-08-16 20:38:08.6987 Trace   DatabaseTarget: Parameter: '@msg' = 'Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)' (String)
+2023-08-16 20:38:08.6987 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:08.7085 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.7085 Trace   DatabaseTarget: Parameter: '@trace' = 'EndpointMiddleware.Invoke => ResourceInvoker.InvokeAsync => ResourceInvoker.<InvokeAsync>g__Logged|17_1' (String)
+2023-08-16 20:38:08.7085 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:08.7085 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.7085 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:08.7176 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.7317 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.7317 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.7317 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.7394 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.7394 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.731' (String)
+2023-08-16 20:38:08.7394 Trace   DatabaseTarget: Parameter: '@msg' = 'Executing controller factory for controller WebScrapingIntegration.API.Controllers.ClubScrapingController (WebScrapingIntegration.API)' (String)
+2023-08-16 20:38:08.7394 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:08.7394 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.7483 Trace   DatabaseTarget: Parameter: '@trace' = 'ResourceInvoker.Next => ControllerActionInvoker.InvokeInnerFilterAsync => ControllerActionInvoker.Next' (String)
+2023-08-16 20:38:08.7483 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:08.7483 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.7483 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:08.7483 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.7664 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.7686 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.7686 Debug Targets configured when LogLevel >= Trace for Logger: WebScrapingIntegration.API.Controllers.ClubScrapingController
+2023-08-16 20:38:08.7686 Debug Logger WebScrapingIntegration.API.Controllers.ClubScrapingController [Trace] => dbTarget consoleTarget
+2023-08-16 20:38:08.7686 Debug Logger WebScrapingIntegration.API.Controllers.ClubScrapingController [Debug] => dbTarget consoleTarget
+2023-08-16 20:38:08.7686 Debug Logger WebScrapingIntegration.API.Controllers.ClubScrapingController [Info] => dbTarget consoleTarget
+2023-08-16 20:38:08.7785 Debug Logger WebScrapingIntegration.API.Controllers.ClubScrapingController [Warn] => dbTarget consoleTarget
+2023-08-16 20:38:08.7785 Debug Logger WebScrapingIntegration.API.Controllers.ClubScrapingController [Error] => dbTarget consoleTarget
+2023-08-16 20:38:08.7785 Debug Logger WebScrapingIntegration.API.Controllers.ClubScrapingController [Fatal] => dbTarget consoleTarget
+2023-08-16 20:38:08.7785 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.7785 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.7886 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.778' (String)
+2023-08-16 20:38:08.7886 Trace   DatabaseTarget: Parameter: '@msg' = 'Executed controller factory for controller WebScrapingIntegration.API.Controllers.ClubScrapingController (WebScrapingIntegration.API)' (String)
+2023-08-16 20:38:08.7886 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:08.7886 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.7886 Trace   DatabaseTarget: Parameter: '@trace' = 'ResourceInvoker.Next => ControllerActionInvoker.InvokeInnerFilterAsync => ControllerActionInvoker.Next' (String)
+2023-08-16 20:38:08.7978 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:08.7978 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.7978 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:08.7978 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.8216 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.8216 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.8351 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.8351 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.8392 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.835' (String)
+2023-08-16 20:38:08.8392 Trace   DatabaseTarget: Parameter: '@msg' = 'Attempting to bind parameter 'query' of type 'System.String' ...' (String)
+2023-08-16 20:38:08.8392 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:08.8392 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.8392 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <<CreateBinderDelegate>g__Bind|0>d.MoveNext => ParameterBinder.BindModelAsync' (String)
+2023-08-16 20:38:08.8484 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder' (String)
+2023-08-16 20:38:08.8484 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.8484 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2023-08-16 20:38:08.8484 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.8687 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.8687 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.8687 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.8687 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.8791 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.868' (String)
+2023-08-16 20:38:08.8791 Trace   DatabaseTarget: Parameter: '@msg' = 'Attempting to bind parameter 'query' of type 'System.String' using the name 'query' in request data ...' (String)
+2023-08-16 20:38:08.8791 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:08.8791 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.8791 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <BindModelAsync>d__8.MoveNext => SimpleTypeModelBinder.BindModelAsync' (String)
+2023-08-16 20:38:08.8877 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder' (String)
+2023-08-16 20:38:08.8877 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.8877 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder
+2023-08-16 20:38:08.8877 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.9040 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.9040 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.9095 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.9095 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.9095 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.909' (String)
+2023-08-16 20:38:08.9095 Trace   DatabaseTarget: Parameter: '@msg' = 'Done attempting to bind parameter 'query' of type 'System.String'.' (String)
+2023-08-16 20:38:08.9188 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:08.9188 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.9188 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <BindModelAsync>d__8.MoveNext => SimpleTypeModelBinder.BindModelAsync' (String)
+2023-08-16 20:38:08.9188 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder' (String)
+2023-08-16 20:38:08.9188 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.9283 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder
+2023-08-16 20:38:08.9283 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.9417 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.9417 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.9417 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.9480 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.9480 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.941' (String)
+2023-08-16 20:38:08.9480 Trace   DatabaseTarget: Parameter: '@msg' = 'Done attempting to bind parameter 'query' of type 'System.String'.' (String)
+2023-08-16 20:38:08.9480 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:08.9480 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.9480 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <<CreateBinderDelegate>g__Bind|0>d.MoveNext => ParameterBinder.BindModelAsync' (String)
+2023-08-16 20:38:08.9584 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder' (String)
+2023-08-16 20:38:08.9584 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.9584 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2023-08-16 20:38:08.9584 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:08.9747 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:08.9747 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:08.9784 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:08.9784 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:08.9784 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:08.978' (String)
+2023-08-16 20:38:08.9784 Trace   DatabaseTarget: Parameter: '@msg' = 'Attempting to validate the bound parameter 'query' of type 'System.String' ...' (String)
+2023-08-16 20:38:08.9784 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:08.9876 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:08.9876 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <<CreateBinderDelegate>g__Bind|0>d.MoveNext => ParameterBinder.BindModelAsync' (String)
+2023-08-16 20:38:08.9876 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder' (String)
+2023-08-16 20:38:08.9876 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:08.9876 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2023-08-16 20:38:08.9876 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:09.0068 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:09.0091 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:09.0091 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:09.0179 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:09.0179 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:09.009' (String)
+2023-08-16 20:38:09.0179 Trace   DatabaseTarget: Parameter: '@msg' = 'Done attempting to validate the bound parameter 'query' of type 'System.String'.' (String)
+2023-08-16 20:38:09.0179 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:09.0179 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:09.0179 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <<CreateBinderDelegate>g__Bind|0>d.MoveNext => ParameterBinder.BindModelAsync' (String)
+2023-08-16 20:38:09.0281 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder' (String)
+2023-08-16 20:38:09.0281 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:09.0281 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2023-08-16 20:38:09.0281 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:09.0440 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:09.0440 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:09.0497 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:09.0497 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:09.0497 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:09.049' (String)
+2023-08-16 20:38:09.0497 Trace   DatabaseTarget: Parameter: '@msg' = 'Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.' (String)
+2023-08-16 20:38:09.0497 Trace   DatabaseTarget: Parameter: '@level' = 'Trace' (String)
+2023-08-16 20:38:09.0576 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:09.0576 Trace   DatabaseTarget: Parameter: '@trace' = 'ResourceInvoker.Next => ControllerActionInvoker.InvokeInnerFilterAsync => ControllerActionInvoker.Next' (String)
+2023-08-16 20:38:09.0576 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:09.0576 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:09.0576 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:09.0576 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:09.0750 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:09.0750 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:09.0792 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:09.0792 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:09.0792 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:09.079' (String)
+2023-08-16 20:38:09.0792 Trace   DatabaseTarget: Parameter: '@msg' = 'Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.' (String)
+2023-08-16 20:38:09.0792 Trace   DatabaseTarget: Parameter: '@level' = 'Trace' (String)
+2023-08-16 20:38:09.0883 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:09.0883 Trace   DatabaseTarget: Parameter: '@trace' = 'ResourceInvoker.Next => ControllerActionInvoker.InvokeInnerFilterAsync => ControllerActionInvoker.Next' (String)
+2023-08-16 20:38:09.0883 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:09.0883 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:09.0883 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:09.0883 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:09.1071 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:09.1088 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:09.1088 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:09.1088 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:09.1088 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:09.108' (String)
+2023-08-16 20:38:09.1088 Trace   DatabaseTarget: Parameter: '@msg' = 'Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.' (String)
+2023-08-16 20:38:09.1186 Trace   DatabaseTarget: Parameter: '@level' = 'Trace' (String)
+2023-08-16 20:38:09.1186 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:09.1186 Trace   DatabaseTarget: Parameter: '@trace' = 'ControllerActionInvoker.Next => ControllerActionInvoker.InvokeNextActionFilterAsync => ControllerActionInvoker.Next' (String)
+2023-08-16 20:38:09.1186 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:09.1186 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:09.1186 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:09.1286 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:09.1379 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:09.1379 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:09.1379 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:09.1379 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:09.1379 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:09.137' (String)
+2023-08-16 20:38:09.1379 Trace   DatabaseTarget: Parameter: '@msg' = 'Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.' (String)
+2023-08-16 20:38:09.1490 Trace   DatabaseTarget: Parameter: '@level' = 'Trace' (String)
+2023-08-16 20:38:09.1490 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:09.1490 Trace   DatabaseTarget: Parameter: '@trace' = 'ControllerActionInvoker.Next => ControllerActionInvoker.InvokeNextActionFilterAsync => ControllerActionInvoker.Next' (String)
+2023-08-16 20:38:09.1490 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:09.1490 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:09.1490 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:09.1590 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:09.1690 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:09.1690 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:09.1690 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:09.1776 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:09.1776 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:09.169' (String)
+2023-08-16 20:38:09.1776 Trace   DatabaseTarget: Parameter: '@msg' = 'Executing action method WebScrapingIntegration.API.Controllers.ClubScrapingController.GetTeamByName (WebScrapingIntegration.API) - Validation state: Valid' (String)
+2023-08-16 20:38:09.1776 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-16 20:38:09.1776 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:09.1776 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <<InvokeActionMethodAsync>g__Logged|12_1>d.MoveNext => Log.ActionMethodExecuting' (String)
+2023-08-16 20:38:09.1885 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:09.1885 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:09.1885 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:09.1885 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:09.2041 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:09.2041 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:09.2080 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:09.2080 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:09.2080 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:09.208' (String)
+2023-08-16 20:38:09.2080 Trace   DatabaseTarget: Parameter: '@msg' = 'Executing action method WebScrapingIntegration.API.Controllers.ClubScrapingController.GetTeamByName (WebScrapingIntegration.API) with arguments (United)' (String)
+2023-08-16 20:38:09.2080 Trace   DatabaseTarget: Parameter: '@level' = 'Trace' (String)
+2023-08-16 20:38:09.2178 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:09.2178 Trace   DatabaseTarget: Parameter: '@trace' = 'ControllerActionInvoker.Next => ControllerActionInvoker.InvokeActionMethodAsync => ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1' (String)
+2023-08-16 20:38:09.2178 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:09.2178 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:09.2178 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:09.2178 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:09.2370 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:09.2388 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:10.0689 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:10.0689 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:10.0689 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:10.068' (String)
+2023-08-16 20:38:10.0689 Trace   DatabaseTarget: Parameter: '@msg' = '/wiki/Manchester_United_F.C.' (String)
+2023-08-16 20:38:10.0778 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-16 20:38:10.0778 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:10.0778 Trace   DatabaseTarget: Parameter: '@trace' = '<Execute>d__0.MoveNext => <no type>.lambda_method8 => ClubScrapingController.GetTeamByName' (String)
+2023-08-16 20:38:10.0778 Trace   DatabaseTarget: Parameter: '@logger' = 'WebScrapingIntegration.API.Controllers.ClubScrapingController' (String)
+2023-08-16 20:38:10.0778 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:10.0778 Debug No available HttpContext, because outside valid request context. Logger: WebScrapingIntegration.API.Controllers.ClubScrapingController
+2023-08-16 20:38:10.0891 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:10.0981 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:10.0981 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:11.4833 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:11.4833 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:11.4886 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:11.483' (String)
+2023-08-16 20:38:11.4886 Trace   DatabaseTarget: Parameter: '@msg' = '/wiki/Newcastle_United_F.C.' (String)
+2023-08-16 20:38:11.4886 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-16 20:38:11.4886 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:11.4886 Trace   DatabaseTarget: Parameter: '@trace' = '<Execute>d__0.MoveNext => <no type>.lambda_method8 => ClubScrapingController.GetTeamByName' (String)
+2023-08-16 20:38:11.4978 Trace   DatabaseTarget: Parameter: '@logger' = 'WebScrapingIntegration.API.Controllers.ClubScrapingController' (String)
+2023-08-16 20:38:11.4978 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:11.4978 Debug No available HttpContext, because outside valid request context. Logger: WebScrapingIntegration.API.Controllers.ClubScrapingController
+2023-08-16 20:38:11.4978 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:11.5152 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:11.5152 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:12.6999 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:12.6999 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:12.6999 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:12.699' (String)
+2023-08-16 20:38:12.6999 Trace   DatabaseTarget: Parameter: '@msg' = '/wiki/West_Ham_United_F.C.' (String)
+2023-08-16 20:38:12.7089 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-16 20:38:12.7089 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:12.7089 Trace   DatabaseTarget: Parameter: '@trace' = '<Execute>d__0.MoveNext => <no type>.lambda_method8 => ClubScrapingController.GetTeamByName' (String)
+2023-08-16 20:38:12.7089 Trace   DatabaseTarget: Parameter: '@logger' = 'WebScrapingIntegration.API.Controllers.ClubScrapingController' (String)
+2023-08-16 20:38:12.7089 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:12.7189 Debug No available HttpContext, because outside valid request context. Logger: WebScrapingIntegration.API.Controllers.ClubScrapingController
+2023-08-16 20:38:12.7189 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:12.7310 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:12.7310 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:13.9890 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:13.9890 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:13.9890 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:13.989' (String)
+2023-08-16 20:38:13.9890 Trace   DatabaseTarget: Parameter: '@msg' = '/wiki/Leeds_United_F.C.' (String)
+2023-08-16 20:38:13.9978 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-16 20:38:13.9978 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:13.9978 Trace   DatabaseTarget: Parameter: '@trace' = '<Execute>d__0.MoveNext => <no type>.lambda_method8 => ClubScrapingController.GetTeamByName' (String)
+2023-08-16 20:38:13.9978 Trace   DatabaseTarget: Parameter: '@logger' = 'WebScrapingIntegration.API.Controllers.ClubScrapingController' (String)
+2023-08-16 20:38:13.9978 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:14.0078 Debug No available HttpContext, because outside valid request context. Logger: WebScrapingIntegration.API.Controllers.ClubScrapingController
+2023-08-16 20:38:14.0078 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:14.0189 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:14.0189 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:15.1812 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:15.1812 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:15.1812 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:15.181' (String)
+2023-08-16 20:38:15.1879 Trace   DatabaseTarget: Parameter: '@msg' = '/wiki/Glacis_United_F.C.' (String)
+2023-08-16 20:38:15.1879 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-16 20:38:15.1879 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:15.1879 Trace   DatabaseTarget: Parameter: '@trace' = '<Execute>d__0.MoveNext => <no type>.lambda_method8 => ClubScrapingController.GetTeamByName' (String)
+2023-08-16 20:38:15.1879 Trace   DatabaseTarget: Parameter: '@logger' = 'WebScrapingIntegration.API.Controllers.ClubScrapingController' (String)
+2023-08-16 20:38:15.1879 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:15.1990 Debug No available HttpContext, because outside valid request context. Logger: WebScrapingIntegration.API.Controllers.ClubScrapingController
+2023-08-16 20:38:15.1990 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:15.2130 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:15.2130 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:17.2246 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:17.2246 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:17.2286 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:17.224' (String)
+2023-08-16 20:38:17.2286 Trace   DatabaseTarget: Parameter: '@msg' = 'Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.' (String)
+2023-08-16 20:38:17.2286 Trace   DatabaseTarget: Parameter: '@level' = 'Trace' (String)
+2023-08-16 20:38:17.2286 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:17.2286 Trace   DatabaseTarget: Parameter: '@trace' = 'ControllerActionInvoker.Next => ControllerActionInvoker.InvokeNextActionFilterAsync => ControllerActionInvoker.Next' (String)
+2023-08-16 20:38:17.2286 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:17.2394 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:17.2394 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:17.2394 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:17.2551 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:17.2551 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:17.2590 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:17.2590 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:17.2590 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:17.259' (String)
+2023-08-16 20:38:17.2590 Trace   DatabaseTarget: Parameter: '@msg' = 'Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.' (String)
+2023-08-16 20:38:17.2590 Trace   DatabaseTarget: Parameter: '@level' = 'Trace' (String)
+2023-08-16 20:38:17.2677 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:17.2677 Trace   DatabaseTarget: Parameter: '@trace' = 'ControllerActionInvoker.Next => ControllerActionInvoker.InvokeNextActionFilterAsync => ControllerActionInvoker.Next' (String)
+2023-08-16 20:38:17.2677 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:17.2677 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:17.2677 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:17.2677 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:17.2849 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:17.2849 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:17.2890 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:17.2890 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:17.2890 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:17.289' (String)
+2023-08-16 20:38:17.2890 Trace   DatabaseTarget: Parameter: '@msg' = 'Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.' (String)
+2023-08-16 20:38:17.2890 Trace   DatabaseTarget: Parameter: '@level' = 'Trace' (String)
+2023-08-16 20:38:17.2990 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:17.2990 Trace   DatabaseTarget: Parameter: '@trace' = 'ResourceInvoker.Next => ControllerActionInvoker.InvokeInnerFilterAsync => ControllerActionInvoker.Next' (String)
+2023-08-16 20:38:17.2990 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:17.2990 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:17.2990 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:17.3083 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:17.3200 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:17.3200 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:17.3200 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:17.3200 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:17.3293 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:17.320' (String)
+2023-08-16 20:38:17.3293 Trace   DatabaseTarget: Parameter: '@msg' = 'Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.' (String)
+2023-08-16 20:38:17.3293 Trace   DatabaseTarget: Parameter: '@level' = 'Trace' (String)
+2023-08-16 20:38:17.3293 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:17.3293 Trace   DatabaseTarget: Parameter: '@trace' = 'ResourceInvoker.Next => ControllerActionInvoker.InvokeInnerFilterAsync => ControllerActionInvoker.Next' (String)
+2023-08-16 20:38:17.3383 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:17.3383 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:17.3383 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:17.3383 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:17.3515 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:17.3515 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:17.3586 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:17.3586 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:17.3586 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:17.358' (String)
+2023-08-16 20:38:17.3586 Trace   DatabaseTarget: Parameter: '@msg' = 'Executed action WebScrapingIntegration.API.Controllers.ClubScrapingController.GetTeamByName (WebScrapingIntegration.API) in 8621.0244ms' (String)
+2023-08-16 20:38:17.3586 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-16 20:38:17.3683 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:17.3683 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <<InvokeAsync>g__Logged|17_1>d.MoveNext => Log.ExecutedAction' (String)
+2023-08-16 20:38:17.3683 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker' (String)
+2023-08-16 20:38:17.3683 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:17.3683 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-16 20:38:17.3683 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:17.3896 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:17.3896 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:17.3896 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:17.3896 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:17.3977 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:17.389' (String)
+2023-08-16 20:38:17.3977 Trace   DatabaseTarget: Parameter: '@msg' = 'Executed endpoint 'WebScrapingIntegration.API.Controllers.ClubScrapingController.GetTeamByName (WebScrapingIntegration.API)'' (String)
+2023-08-16 20:38:17.3977 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-16 20:38:17.3977 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:17.3977 Trace   DatabaseTarget: Parameter: '@trace' = '<Invoke>d__9.MoveNext => EndpointMiddleware.Invoke => EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0' (String)
+2023-08-16 20:38:17.3977 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Routing.EndpointMiddleware' (String)
+2023-08-16 20:38:17.4083 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:17.4083 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2023-08-16 20:38:17.4083 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:17.4209 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:17.4209 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:17.4308 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:17.4308 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:17.4308 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:17.430' (String)
+2023-08-16 20:38:17.4308 Trace   DatabaseTarget: Parameter: '@msg' = 'An unhandled exception has occurred while executing the request.' (String)
+2023-08-16 20:38:17.4390 Trace   DatabaseTarget: Parameter: '@level' = 'Error' (String)
+2023-08-16 20:38:17.4390 Trace   DatabaseTarget: Parameter: '@exception' = 'System.NullReferenceException: Object reference not set to an instance of an object.
+   at WebScrapingIntegration.API.Controllers.ClubScrapingController.GetTeamByName(String query) in C:\Users\Szymon\source\repos\EuropeLeaguesSimulator\src\Services\WebScrapingIntegration\WebScrapingIntegration.API\Controllers\ClubScrapingController.cs:line 47
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)' (String)
+2023-08-16 20:38:17.4390 Trace   DatabaseTarget: Parameter: '@trace' = '<ProcessRequests>d__238`1.MoveNext => HostFilteringMiddleware.Invoke => DeveloperExceptionPageMiddlewareImpl.Invoke' (String)
+2023-08-16 20:38:17.4478 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware' (String)
+2023-08-16 20:38:17.4478 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:17.4478 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware
+2023-08-16 20:38:17.4478 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:17.4666 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:17.4688 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:17.4688 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:17.4789 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:17.4789 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:17.468' (String)
+2023-08-16 20:38:17.4789 Trace   DatabaseTarget: Parameter: '@msg' = 'Connection id "0HMSUJ2PDGB63" completed keep alive response.' (String)
+2023-08-16 20:38:17.4789 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-16 20:38:17.4789 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:17.4894 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <ProcessRequests>d__238`1.MoveNext => HttpProtocol.WriteSuffix' (String)
+2023-08-16 20:38:17.4894 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Server.Kestrel.Connections' (String)
+2023-08-16 20:38:17.4894 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:17.4894 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2023-08-16 20:38:17.4894 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:17.5091 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:17.5091 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-16 20:38:17.5091 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-16 20:38:17.5091 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-16 20:38:17.5187 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/16 20:38:17.509' (String)
+2023-08-16 20:38:17.5187 Trace   DatabaseTarget: Parameter: '@msg' = 'Request finished HTTP/1.1 POST http://localhost:8002/api/ClubScraping?query=United - 0 - 500 - text/plain;+charset=utf-8 9648.5929ms' (String)
+2023-08-16 20:38:17.5187 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-16 20:38:17.5187 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-16 20:38:17.5187 Trace   DatabaseTarget: Parameter: '@trace' = '<ProcessRequests>d__238`1.MoveNext => HostingApplication.DisposeContext => HostingApplicationDiagnostics.LogRequestFinished' (String)
+2023-08-16 20:38:17.5187 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Hosting.Diagnostics' (String)
+2023-08-16 20:38:17.5289 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-16 20:38:17.5289 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2023-08-16 20:38:17.5289 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-16 20:38:17.5422 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-16 20:38:17.5422 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).

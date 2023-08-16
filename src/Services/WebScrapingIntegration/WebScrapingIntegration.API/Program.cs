@@ -17,7 +17,7 @@ try
     builder.Services.AddLogging(builder =>
     {
         builder.ClearProviders();
-        builder.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
+        builder.SetMinimumLevel(LogLevel.Trace);
         builder.AddConsole();
         builder.AddNLog();
     });
