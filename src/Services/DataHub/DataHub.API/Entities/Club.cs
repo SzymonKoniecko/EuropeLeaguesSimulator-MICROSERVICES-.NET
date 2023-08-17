@@ -1,12 +1,13 @@
-﻿namespace DataHub.API.Models
+﻿namespace DataHub.API.Entities
 {
-    public class ClubDto
+    public class Club
     {
         public string FullName { get; set; }
         public string? NickName { get; set; }
         public string Logo { get; set; }
         public string Manager { get; set; }
         public string League { get; set; }
-        public StadiumDto StadiumDto { get; set; }
+        public Guid StadiumId { get; set; }
+        public virtual Stadium Stadium { get; set; }
     }
 }

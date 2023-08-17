@@ -23,7 +23,7 @@ namespace WebScrapingIntegration.API.Controllers
         /// <param name="query"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<ActionResult<IEnumerable<ClubDetails>>> GetTeamByName([FromQuery] string query)
+        public async Task<ActionResult<IEnumerable<ClubDetails>>> GetClubByName([FromQuery] string query)
         {
             string baseWikiUrl = "https://en.wikipedia.org";
             string url = "https://en.wikipedia.org/wiki/List_of_top-division_football_clubs_in_UEFA_countries";
@@ -38,13 +38,13 @@ namespace WebScrapingIntegration.API.Controllers
                 .Select(th => th.GetAttributeValue("href", "")).ToList();
             foreach (var href in clubsHref)
             {
-                _logger.LogInformation(href);
+                _logger.LogInformation($"Started search for {query} in {href}");
                 //string href = item.GetAttributeValue("href", "");
                 var clubHtml = httpClient.GetStringAsync(baseWikiUrl + href).Result;
                 htmlDocument.LoadHtml(clubHtml);
                 var trNodesOfClub = htmlDocument.DocumentNode.SelectNodes("//*[@id=\"mw-content-text\"]/div[1]/table[1]/tbody//tr");
                 ClubDetails clubDetails = new();
-                clubDetails.Logo = htmlDocument.DocumentNode.SelectSingleNode("//*[@id=\"mw-content-text\"]/div[1]/table[1]/tbody/tr[1]/td/span/a/img").GetAttributeValue("src", "");
+                clubDetails.LogoUrl = htmlDocument.DocumentNode.SelectSingleNode("//*[@id=\"mw-content-text\"]/div[1]/table[1]/tbody/tr[1]/td/span/a/img").GetAttributeValue("src", "");
                 foreach (var tr in trNodesOfClub)
                 {
                     if (tr.FirstChild.InnerText == "Full name")
@@ -63,9 +63,30 @@ namespace WebScrapingIntegration.API.Controllers
                     {
                         clubDetails.League = ReplaceNonTextWithSpaces(tr.FirstChild.NextSibling.InnerText, false);
                     }
+                    else if (tr.FirstChild.InnerText == "Ground" || tr.FirstChild.InnerText == "Stadium")
+                    {
+                        clubDetails.StadiumFullName = tr.FirstChild.NextSibling.FirstChild.GetAttributeValue("title", "");
+                        string stadiumHref = tr.FirstChild.NextSibling.FirstChild.GetAttributeValue("href", "");
+
+                        var stadiumHtml = httpClient.GetStringAsync(baseWikiUrl + stadiumHref).Result;
+                        htmlDocument.LoadHtml(stadiumHtml);
+                        _logger.LogInformation($"Started search for stadium: {clubDetails.StadiumFullName}");
+                        var trOfStadium = htmlDocument.DocumentNode.SelectNodes("//*[@id=\"mw-content-text\"]/div[1]/table[1]/tbody/tr");
+                        foreach (var trStadium in trOfStadium)
+                        {
+                            if (trStadium.FirstChild.HasClass("infobox-image"))
+                            {
+                                clubDetails.StadiumImageUrl = trStadium.FirstChild.FirstChild.FirstChild.GetAttributeValue("href", ""); ;
+                            }
+                        }
+                    }
+                    else if (tr.FirstChild.InnerText == "Capacity")
+                    {
+                        clubDetails.StadiumCapacity = float.Parse(tr.FirstChild.NextSibling.FirstChild.InnerText);
+                    }
                 }
                 result.Add(clubDetails);
-                Thread.Sleep(1000);
+                Thread.Sleep(100);
             }
             return Ok(result);
         }

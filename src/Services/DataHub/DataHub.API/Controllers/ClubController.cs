@@ -8,10 +8,17 @@ namespace DataHub.API.Controllers
     [ApiController]
     public class ClubController : ControllerBase
     {
+        private readonly ILogger<ClubController> _logger;
+
+        public ClubController(ILogger<ClubController> logger)
+        {
+            _logger = logger;
+        }
         // GET: api/<ClubController>
         [HttpGet(Name = "GetClubByName")]
         public IEnumerable<string> GetClubByName([FromQuery] string query)
         {
+            _logger.LogError(new Exception(), "erorr");
             return new string[] { "value1", "value2" };
         }
 

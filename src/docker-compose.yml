@@ -17,12 +17,16 @@ services:
     build:
       context: .
       dockerfile: Services/SimulationEngine/SimulationEngine.API/Dockerfile
+    networks:
+    - tmpNetwork
 
   tournament.api:
     image: ${DOCKER_REGISTRY-}tournamentapi
     build:
       context: .
       dockerfile: Services/Tournament.API/Tournament.API/Dockerfile
+    networks:
+    - tmpNetwork
 
 
   webscrapingintegration.api:
@@ -39,6 +43,8 @@ services:
     build:
       context: .
       dockerfile: Services/Settings/Settings.API/Dockerfile
+    networks:
+    - tmpNetwork
 
 
   result.api:
@@ -46,6 +52,8 @@ services:
     build:
       context: .
       dockerfile: Services/Result/Result.API/Dockerfile
+    networks:
+    - tmpNetwork
 
 
   processmanager.api:
@@ -53,6 +61,8 @@ services:
     build:
       context: .
       dockerfile: Services/ProcessManager/ProcessManager.API/Dockerfile
+    networks:
+    - tmpNetwork
 
 
   matchmanagment.api:
@@ -60,6 +70,8 @@ services:
     build:
       context: .
       dockerfile: Services/MatchManagment/MatchManagment.API/Dockerfile
+    networks:
+    - tmpNetwork
 
 
   logger.api:
@@ -97,23 +109,25 @@ services:
     build:
       context: .
       dockerfile: Services/Cache/Cache.API/Dockerfile
-
-  camunda:
-    image: camunda/camunda-bpm-platform:latest
-    container_name: camunda
-    ports:
-      - "8080:8080"
-    environment:
-      - CAMUNDA_BPM_DB_DRIVER=org.sqlserver.jdbc.Driver
-      - CAMUNDA_BPM_DB_URL=jdbc:sqlserver://mssql-container:1433;databaseName=ProcessManager
-      - CAMUNDA_BPM_DB_USERNAME=sa
-      - CAMUNDA_BPM_DB_PASSWORD=YourStrongMSSQLPassword
-      - CAMUNDA_ADMIN_USER=myadmin
-      - CAMUNDA_ADMIN_PASSWORD=mypassword
-    depends_on:
-    - mssql-container
     networks:
     - tmpNetwork
+
+#  camunda:
+#    image: camunda/camunda-bpm-platform:latest
+#    container_name: camunda
+#    ports:
+#      - "8080:8080"
+#    environment:
+#      - CAMUNDA_BPM_DB_DRIVER=org.sqlserver.jdbc.Driver
+#      - CAMUNDA_BPM_DB_URL=jdbc:sqlserver://mssql-container:1433;databaseName=ProcessManager
+#      - CAMUNDA_BPM_DB_USERNAME=sa
+#      - CAMUNDA_BPM_DB_PASSWORD=YourStrongMSSQLPassword
+#      - CAMUNDA_ADMIN_USER=myadmin
+#      - CAMUNDA_ADMIN_PASSWORD=mypassword
+#    depends_on:
+#    - mssql-container
+#    networks:
+#    - tmpNetwork
     
 
 

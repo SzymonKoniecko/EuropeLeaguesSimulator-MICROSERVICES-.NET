@@ -9,48 +9,48 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80"
+      - "8004:80"
 
   tournament.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80"
+      - "8005:80"
 
 
   webscrapingintegration.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "8002:80"
+      - "8003:80"
 
 
   settings.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80"
+      - "8006:80"
 
 
   result.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80"
+      - "8007:80"
 
 
   processmanager.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80"
+      - "8001:80"
 
 
   matchmanagment.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80"
+      - "8008:80"
 
 
   logger.api:
@@ -64,12 +64,12 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "8001:80"
+      - "8002:80"
 
 
   cache.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80"
+      - "8009:80"
 

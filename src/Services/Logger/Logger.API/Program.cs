@@ -36,7 +36,6 @@ try
     app.MapControllers();
 
     app.Run();
-
 }
 catch (Exception exception)
 {

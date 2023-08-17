@@ -8,10 +8,17 @@ namespace ProcessManager.API.Controllers
     [ApiController]
     public class ProcessController : ControllerBase
     {
-        // GET: api/<ProcessController>
-        [HttpGet]
-        public IEnumerable<string> GetTeamById([FromQuery] int id)
+        private readonly ILogger<ProcessController> _logger;
+
+        public ProcessController(ILogger<ProcessController> logger)
         {
+            _logger = logger;
+        }
+        [HttpGet]
+        public IEnumerable<string> GetClubsById([FromQuery] string query)
+        {
+
+            _logger.LogInformation($"Search process started for query = {query}");
             return new string[] { "value1", "value2" };
         }
 
