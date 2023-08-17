@@ -12,21 +12,21 @@ services:
     ports:
       - "1433:1433"   # Mapowanie portu kontenera na port hosta
 
-  simulationengine.api:
-    image: ${DOCKER_REGISTRY-}simulationengineapi
-    build:
-      context: .
-      dockerfile: Services/SimulationEngine/SimulationEngine.API/Dockerfile
-    networks:
-    - tmpNetwork
+#  simulationengine.api:
+#    image: ${DOCKER_REGISTRY-}simulationengineapi
+#    build:
+#      context: .
+#      dockerfile: Services/SimulationEngine/SimulationEngine.API/Dockerfile
+#    networks:
+#    - tmpNetwork
 
-  tournament.api:
-    image: ${DOCKER_REGISTRY-}tournamentapi
-    build:
-      context: .
-      dockerfile: Services/Tournament.API/Tournament.API/Dockerfile
-    networks:
-    - tmpNetwork
+#  tournament.api:
+#    image: ${DOCKER_REGISTRY-}tournamentapi
+#    build:
+#      context: .
+#      dockerfile: Services/Tournament.API/Tournament.API/Dockerfile
+#    networks:
+#    - tmpNetwork
 
 
   webscrapingintegration.api:
@@ -38,23 +38,23 @@ services:
     - tmpNetwork
 
 
-  settings.api:
-    image: ${DOCKER_REGISTRY-}settingsapi
-    build:
-      context: .
-      dockerfile: Services/Settings/Settings.API/Dockerfile
-    networks:
-    - tmpNetwork
-
-
-  result.api:
-    image: ${DOCKER_REGISTRY-}resultapi
-    build:
-      context: .
-      dockerfile: Services/Result/Result.API/Dockerfile
-    networks:
-    - tmpNetwork
-
+#  settings.api:
+#    image: ${DOCKER_REGISTRY-}settingsapi
+#    build:
+#      context: .
+#      dockerfile: Services/Settings/Settings.API/Dockerfile
+#    networks:
+#    - tmpNetwork
+#
+#
+#  result.api:
+#    image: ${DOCKER_REGISTRY-}resultapi
+#    build:
+#      context: .
+#      dockerfile: Services/Result/Result.API/Dockerfile
+#    networks:
+#    - tmpNetwork
+#
 
   processmanager.api:
     image: ${DOCKER_REGISTRY-}processmanagerapi
@@ -64,14 +64,14 @@ services:
     networks:
     - tmpNetwork
 
-
-  matchmanagment.api:
-    image: ${DOCKER_REGISTRY-}matchmanagmentapi
-    build:
-      context: .
-      dockerfile: Services/MatchManagment/MatchManagment.API/Dockerfile
-    networks:
-    - tmpNetwork
+#
+#  matchmanagment.api:
+#    image: ${DOCKER_REGISTRY-}matchmanagmentapi
+#    build:
+#      context: .
+#      dockerfile: Services/MatchManagment/MatchManagment.API/Dockerfile
+#    networks:
+#    - tmpNetwork
 
 
   logger.api:
@@ -103,23 +103,23 @@ services:
     networks:
     - tmpNetwork
 
-
-  cache.api:
-    image: ${DOCKER_REGISTRY-}cacheapi
-    build:
-      context: .
-      dockerfile: Services/Cache/Cache.API/Dockerfile
-    networks:
-    - tmpNetwork
-
-#  camunda:
-#    image: camunda/camunda-bpm-platform:latest
-#    container_name: camunda
-#    ports:
-#      - "8080:8080"
-#    environment:
-#      - CAMUNDA_BPM_DB_DRIVER=org.sqlserver.jdbc.Driver
-#      - CAMUNDA_BPM_DB_URL=jdbc:sqlserver://mssql-container:1433;databaseName=ProcessManager
+#
+#  cache.api:
+#    image: ${DOCKER_REGISTRY-}cacheapi
+#    build:
+#      context: .
+#      dockerfile: Services/Cache/Cache.API/Dockerfile
+#    networks:
+#    - tmpNetwork
+#
+##  camunda:
+##    image: camunda/camunda-bpm-platform:latest
+##    container_name: camunda
+##    ports:
+##      - "8080:8080"
+##    environment:
+##      - CAMUNDA_BPM_DB_DRIVER=org.sqlserver.jdbc.Driver
+##      - CAMUNDA_BPM_DB_URL=jdbc:sqlserver://mssql-container:1433;databaseName=ProcessManager
 #      - CAMUNDA_BPM_DB_USERNAME=sa
 #      - CAMUNDA_BPM_DB_PASSWORD=YourStrongMSSQLPassword
 #      - CAMUNDA_ADMIN_USER=myadmin

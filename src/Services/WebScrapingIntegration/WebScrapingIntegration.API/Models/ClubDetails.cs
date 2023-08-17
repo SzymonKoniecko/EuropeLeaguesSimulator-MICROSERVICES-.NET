@@ -8,7 +8,7 @@
         public string Manager { get; set; }
         public string League { get; set; }
         public string StadiumFullName { get; set; }
-        public float StadiumCapacity { get; set; }
+        public string StadiumCapacity { get; set; }
         public string StadiumImageUrl { get; set; }
     }
 }

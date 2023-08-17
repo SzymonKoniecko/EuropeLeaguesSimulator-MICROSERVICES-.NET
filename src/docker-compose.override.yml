@@ -5,17 +5,17 @@ services:
     volumes:
       - sql-data:/var/opt/mssql
   
-  simulationengine.api:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "8004:80"
+#  simulationengine.api:
+#    environment:
+#      - ASPNETCORE_ENVIRONMENT=Development
+#    ports:
+#      - "8004:80"
 
-  tournament.api:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "8005:80"
+#  tournament.api:
+#    environment:
+#      - ASPNETCORE_ENVIRONMENT=Development
+#    ports:
+#      - "8005:80"
 
 
   webscrapingintegration.api:
@@ -25,19 +25,19 @@ services:
       - "8003:80"
 
 
-  settings.api:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "8006:80"
+#  settings.api:
+#    environment:
+#      - ASPNETCORE_ENVIRONMENT=Development
+#    ports:
+#      - "8006:80"
+#
 
-
-  result.api:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "8007:80"
-
+#  result.api:
+#    environment:
+#      - ASPNETCORE_ENVIRONMENT=Development
+#    ports:
+#      - "8007:80"
+#
 
   processmanager.api:
     environment:
@@ -46,12 +46,12 @@ services:
       - "8001:80"
 
 
-  matchmanagment.api:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "8008:80"
-
+#  matchmanagment.api:
+#    environment:
+#      - ASPNETCORE_ENVIRONMENT=Development
+#    ports:
+#      - "8008:80"
+#
 
   logger.api:
     environment:
@@ -66,10 +66,10 @@ services:
     ports:
       - "8002:80"
 
-
-  cache.api:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "8009:80"
+#
+#  cache.api:
+#    environment:
+#      - ASPNETCORE_ENVIRONMENT=Development
+#    ports:
+#      - "8009:80"
 
