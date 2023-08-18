@@ -14,6 +14,9 @@ namespace DataHub.API.Mappers
                 .ForMember(c => c.StadiumDto.Capacity, c => c.MapFrom(s => s.Stadium.Capacity))
                 .ForMember(c => c.StadiumDto.ImageUrl, c => c.MapFrom(s => s.Stadium.ImageUrl));
             CreateMap<Stadium, StadiumDto>();
+
+
+
         }
     }
 }

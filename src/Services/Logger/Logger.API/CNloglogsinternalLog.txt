@@ -1,0 +1,510 @@
+2023-08-18 19:05:09.7743 Debug Message Template Auto Format enabled
+2023-08-18 19:05:09.8144 Debug Object reflection needed to resolve type: NLog.Targets.DatabaseTarget, NLog.Database
+2023-08-18 19:05:09.9010 Debug Object reflection needed to configure instance of type: NLog.Targets.DatabaseTarget
+2023-08-18 19:05:09.9081 Debug Object reflection needed to create instance of type: NLog.Targets.DatabaseParameterInfo
+2023-08-18 19:05:09.9132 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:09.9132 Trace Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2023-08-18 19:05:09.9132 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:09.9251 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-08-18 19:05:09.9251 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:09.9251 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-08-18 19:05:09.9409 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:09.9447 Trace Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2023-08-18 19:05:09.9447 Trace  Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2023-08-18 19:05:09.9562 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:09.9562 Trace Scanning StackTraceLayoutRenderer 'Layout Renderer: ${stacktrace}'
+2023-08-18 19:05:09.9638 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:09.9638 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2023-08-18 19:05:09.9638 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:09.9761 Trace Scanning AspNetRequestUrlRenderer 'Layout Renderer: ${aspnet-request-url}'
+2023-08-18 19:05:09.9761 Debug Adding target NLog.Targets.DatabaseTarget(Name=dbTarget)
+2023-08-18 19:05:09.9854 Info Registered target NLog.Targets.DatabaseTarget(Name=dbTarget)
+2023-08-18 19:05:09.9854 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:09.9959 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-08-18 19:05:09.9959 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:10.0037 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-08-18 19:05:10.0037 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:10.0124 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-08-18 19:05:10.0124 Debug Adding target NLog.Targets.ConsoleTarget(Name=consoleTarget)
+2023-08-18 19:05:10.0124 Info Registered target NLog.Targets.ConsoleTarget(Name=consoleTarget)
+2023-08-18 19:05:10.0253 Trace ParseRulesElement
+2023-08-18 19:05:10.0804 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.3.1999. Product version: 5.2.3+a5ddef92a8afb22508450803e37c001f4a3ba52a. GlobalAssemblyCache: False
+2023-08-18 19:05:10.1035 Debug Watching file-filter 'nlog.config' in directory: /app/bin/Debug/net7.0
+2023-08-18 19:05:10.1035 Debug --- NLog configuration dump ---
+2023-08-18 19:05:10.1137 Debug Targets:
+2023-08-18 19:05:10.1137 Debug DatabaseTarget(Name=dbTarget)
+2023-08-18 19:05:10.1224 Debug ConsoleTarget(Name=consoleTarget)
+2023-08-18 19:05:10.1224 Debug Rules:
+2023-08-18 19:05:10.1224 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ dbTarget ]
+2023-08-18 19:05:10.1350 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ consoleTarget ]
+2023-08-18 19:05:10.1350 Debug --- End of NLog configuration dump ---
+2023-08-18 19:05:10.1442 Trace FindReachableObject<System.Object>:
+2023-08-18 19:05:10.1442 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ dbTarget ]'
+2023-08-18 19:05:10.1526 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic.IList`1[NLog.Targets.Target]
+2023-08-18 19:05:10.1526 Trace  Scanning DatabaseTarget 'DatabaseTarget(Name=dbTarget)'
+2023-08-18 19:05:10.1627 Trace   Scanning Property ConnectionString 'Data Source=mssql-container;Initial Catalog=Logger;User ID=MicroservicesUser;Password=Zaq1@wsx;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;Application Intent=ReadWrite;MultiSubnetFailover=False;' NLog.Layouts.Layout
+2023-08-18 19:05:10.1627 Trace   Scanning SimpleLayout 'Data Source=mssql-container;Initial Catalog=Logger;User ID=MicroservicesUser;Password=Zaq1@wsx;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;Application Intent=ReadWrite;MultiSubnetFailover=False;'
+2023-08-18 19:05:10.1627 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.1761 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-18 19:05:10.1761 Trace   Scanning Property InstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseCommandInfo]
+2023-08-18 19:05:10.1855 Trace   Scanning Property InstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseCommandInfo]
+2023-08-18 19:05:10.1855 Trace   Scanning Property UninstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseCommandInfo]
+2023-08-18 19:05:10.1952 Trace   Scanning Property UninstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseCommandInfo]
+2023-08-18 19:05:10.1952 Trace   Scanning Property DBHost '.' NLog.Layouts.Layout
+2023-08-18 19:05:10.2046 Trace   Scanning SimpleLayout '.'
+2023-08-18 19:05:10.2046 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.2134 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-18 19:05:10.2134 Trace   Scanning Property CommandText 'INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)' NLog.Layouts.Layout
+2023-08-18 19:05:10.2229 Trace   Scanning SimpleLayout 'INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)'
+2023-08-18 19:05:10.2229 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.2324 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-18 19:05:10.2324 Trace   Scanning Property Parameters 'System.Collections.Generic.List`1[NLog.Targets.DatabaseParameterInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseParameterInfo]
+2023-08-18 19:05:10.2324 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-18 19:05:10.2471 Trace    Scanning Property Layout '${date}' NLog.Layouts.Layout
+2023-08-18 19:05:10.2471 Trace    Scanning SimpleLayout '${date}'
+2023-08-18 19:05:10.2565 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.2565 Trace     Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2023-08-18 19:05:10.2646 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-18 19:05:10.2646 Trace    Scanning Property Layout '${message}' NLog.Layouts.Layout
+2023-08-18 19:05:10.2738 Trace    Scanning SimpleLayout '${message}'
+2023-08-18 19:05:10.2738 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.2824 Trace     Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-08-18 19:05:10.2824 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-18 19:05:10.2824 Trace    Scanning Property Layout '${level}' NLog.Layouts.Layout
+2023-08-18 19:05:10.2959 Trace    Scanning SimpleLayout '${level}'
+2023-08-18 19:05:10.2959 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.3057 Trace     Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-08-18 19:05:10.3057 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-18 19:05:10.3157 Trace    Scanning Property Layout '${exception}' NLog.Layouts.Layout
+2023-08-18 19:05:10.3157 Trace    Scanning SimpleLayout '${exception}'
+2023-08-18 19:05:10.3253 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.3253 Trace     Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2023-08-18 19:05:10.3359 Trace      Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2023-08-18 19:05:10.3359 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-18 19:05:10.3459 Trace    Scanning Property Layout '${stacktrace}' NLog.Layouts.Layout
+2023-08-18 19:05:10.3459 Trace    Scanning SimpleLayout '${stacktrace}'
+2023-08-18 19:05:10.3556 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.3556 Trace     Scanning StackTraceLayoutRenderer 'Layout Renderer: ${stacktrace}'
+2023-08-18 19:05:10.3649 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-18 19:05:10.3649 Trace    Scanning Property Layout '${logger}' NLog.Layouts.Layout
+2023-08-18 19:05:10.3739 Trace    Scanning SimpleLayout '${logger}'
+2023-08-18 19:05:10.3739 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.3855 Trace     Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2023-08-18 19:05:10.3855 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-18 19:05:10.3949 Trace    Scanning Property Layout '${aspnet-request-url}' NLog.Layouts.Layout
+2023-08-18 19:05:10.3949 Trace    Scanning SimpleLayout '${aspnet-request-url}'
+2023-08-18 19:05:10.4042 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.4042 Trace     Scanning AspNetRequestUrlRenderer 'Layout Renderer: ${aspnet-request-url}'
+2023-08-18 19:05:10.4137 Trace   Scanning Property Parameters 'System.Collections.Generic.List`1[NLog.Targets.DatabaseParameterInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseParameterInfo]
+2023-08-18 19:05:10.4137 Trace   Scanning Property ConnectionProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseObjectPropertyInfo]
+2023-08-18 19:05:10.4235 Trace   Scanning Property ConnectionProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseObjectPropertyInfo]
+2023-08-18 19:05:10.4235 Trace   Scanning Property CommandProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseObjectPropertyInfo]
+2023-08-18 19:05:10.4337 Trace   Scanning Property CommandProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseObjectPropertyInfo]
+2023-08-18 19:05:10.4337 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic.IList`1[NLog.Config.LoggingRule]
+2023-08-18 19:05:10.4438 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic.IList`1[NLog.Filters.Filter]
+2023-08-18 19:05:10.4438 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ consoleTarget ]'
+2023-08-18 19:05:10.4536 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic.IList`1[NLog.Targets.Target]
+2023-08-18 19:05:10.4536 Trace  Scanning ConsoleTarget 'ConsoleTarget(Name=consoleTarget)'
+2023-08-18 19:05:10.4625 Trace   Scanning Property Layout '${longdate} level=${level} message=${message}' NLog.Layouts.Layout
+2023-08-18 19:05:10.4625 Trace   Scanning SimpleLayout '${longdate} level=${level} message=${message}'
+2023-08-18 19:05:10.4625 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.4762 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-08-18 19:05:10.4762 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-18 19:05:10.4862 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-08-18 19:05:10.4862 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-18 19:05:10.4957 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-08-18 19:05:10.5044 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic.IList`1[NLog.Config.LoggingRule]
+2023-08-18 19:05:10.5044 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic.IList`1[NLog.Filters.Filter]
+2023-08-18 19:05:10.5203 Info Validating config: TargetNames=dbTarget, consoleTarget, ConfigItems=37, FilePath=/app/bin/Debug/net7.0/nlog.config
+2023-08-18 19:05:10.5271 Debug Unused target checking is started... Rule Count: 2, Target Count: 2
+2023-08-18 19:05:10.5394 Debug Unused target checking is completed. Total Rule Count: 2, Total Target Count: 2, Unused Target Count: 0
+2023-08-18 19:05:10.5454 Trace Initializing Layout Renderer: ${message}
+2023-08-18 19:05:10.5454 Trace Initializing Layout Renderer: ${literal}
+2023-08-18 19:05:10.5547 Trace Initializing Layout Renderer: ${level}
+2023-08-18 19:05:10.5547 Trace Initializing Layout Renderer: ${literal}
+2023-08-18 19:05:10.5644 Trace Initializing Layout Renderer: ${longdate}
+2023-08-18 19:05:10.5644 Trace Initializing ${longdate} level=${level} message=${message}
+2023-08-18 19:05:10.5759 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:10.5759 Trace Scanning SimpleLayout '${longdate} level=${level} message=${message}'
+2023-08-18 19:05:10.5856 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.5856 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-08-18 19:05:10.5941 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-18 19:05:10.5941 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-08-18 19:05:10.6032 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-18 19:05:10.6032 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-08-18 19:05:10.6144 Trace Initializing ConsoleTarget(Name=consoleTarget)
+2023-08-18 19:05:10.6144 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-08-18 19:05:10.6251 Trace Scanning ConsoleTarget 'ConsoleTarget(Name=consoleTarget)'
+2023-08-18 19:05:10.6251 Trace  Scanning Property Layout '${longdate} level=${level} message=${message}' NLog.Layouts.Layout
+2023-08-18 19:05:10.6350 Trace ConsoleTarget(Name=consoleTarget) has 1 layouts
+2023-08-18 19:05:10.6350 Trace Initializing Layout Renderer: ${aspnet-request-url}
+2023-08-18 19:05:10.6452 Trace Initializing ${aspnet-request-url}
+2023-08-18 19:05:10.6452 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:10.6554 Trace Scanning SimpleLayout '${aspnet-request-url}'
+2023-08-18 19:05:10.6554 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.6646 Trace  Scanning AspNetRequestUrlRenderer 'Layout Renderer: ${aspnet-request-url}'
+2023-08-18 19:05:10.6646 Trace Initializing Layout Renderer: ${loggername}
+2023-08-18 19:05:10.6733 Trace Initializing ${logger}
+2023-08-18 19:05:10.6733 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:10.6733 Trace Scanning SimpleLayout '${logger}'
+2023-08-18 19:05:10.6863 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.6863 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2023-08-18 19:05:10.6951 Trace Initializing Layout Renderer: ${stacktrace}
+2023-08-18 19:05:10.6951 Trace Initializing ${stacktrace}
+2023-08-18 19:05:10.7046 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:10.7046 Trace Scanning SimpleLayout '${stacktrace}'
+2023-08-18 19:05:10.7135 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.7135 Trace  Scanning StackTraceLayoutRenderer 'Layout Renderer: ${stacktrace}'
+2023-08-18 19:05:10.7231 Trace Initializing Layout Renderer: ${exception}
+2023-08-18 19:05:10.7231 Trace Initializing ${exception}
+2023-08-18 19:05:10.7329 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:10.7329 Trace Scanning SimpleLayout '${exception}'
+2023-08-18 19:05:10.7329 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.7470 Trace  Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2023-08-18 19:05:10.7470 Trace   Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2023-08-18 19:05:10.7565 Trace Initializing Layout Renderer: ${level}
+2023-08-18 19:05:10.7565 Trace Initializing ${level}
+2023-08-18 19:05:10.7657 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:10.7657 Trace Scanning SimpleLayout '${level}'
+2023-08-18 19:05:10.7751 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.7751 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-08-18 19:05:10.7850 Trace Initializing Layout Renderer: ${message}
+2023-08-18 19:05:10.7850 Trace Initializing ${message}
+2023-08-18 19:05:10.7940 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:10.7940 Trace Scanning SimpleLayout '${message}'
+2023-08-18 19:05:10.8033 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.8033 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-08-18 19:05:10.8125 Trace Initializing Layout Renderer: ${date}
+2023-08-18 19:05:10.8125 Trace Initializing ${date}
+2023-08-18 19:05:10.8125 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:10.8258 Trace Scanning SimpleLayout '${date}'
+2023-08-18 19:05:10.8258 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.8356 Trace  Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2023-08-18 19:05:10.8356 Trace Initializing Layout Renderer: ${literal}
+2023-08-18 19:05:10.8454 Trace Initializing INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-18 19:05:10.8454 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:10.8556 Trace Scanning SimpleLayout 'INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)'
+2023-08-18 19:05:10.8556 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.8659 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-18 19:05:10.8659 Trace Initializing Layout Renderer: ${literal}
+2023-08-18 19:05:10.8757 Trace Initializing .
+2023-08-18 19:05:10.8757 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:10.8848 Trace Scanning SimpleLayout '.'
+2023-08-18 19:05:10.8848 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.8936 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-18 19:05:10.8936 Trace Initializing Layout Renderer: ${literal}
+2023-08-18 19:05:10.9031 Trace Initializing Data Source=mssql-container;Initial Catalog=Logger;User ID=MicroservicesUser;Password=Zaq1@wsx;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;Application Intent=ReadWrite;MultiSubnetFailover=False;
+2023-08-18 19:05:10.9031 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:10.9134 Trace Scanning SimpleLayout 'Data Source=mssql-container;Initial Catalog=Logger;User ID=MicroservicesUser;Password=Zaq1@wsx;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;Application Intent=ReadWrite;MultiSubnetFailover=False;'
+2023-08-18 19:05:10.9134 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:10.9134 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-18 19:05:10.9269 Trace Initializing DatabaseTarget(Name=dbTarget)
+2023-08-18 19:05:10.9269 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-08-18 19:05:10.9362 Trace Scanning DatabaseTarget 'DatabaseTarget(Name=dbTarget)'
+2023-08-18 19:05:10.9362 Trace  Scanning Property ConnectionString 'Data Source=mssql-container;Initial Catalog=Logger;User ID=MicroservicesUser;Password=Zaq1@wsx;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;Application Intent=ReadWrite;MultiSubnetFailover=False;' NLog.Layouts.Layout
+2023-08-18 19:05:10.9453 Trace  Scanning Property InstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseCommandInfo]
+2023-08-18 19:05:10.9453 Trace  Scanning Property InstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseCommandInfo]
+2023-08-18 19:05:10.9545 Trace  Scanning Property UninstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseCommandInfo]
+2023-08-18 19:05:10.9545 Trace  Scanning Property UninstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseCommandInfo]
+2023-08-18 19:05:10.9635 Trace  Scanning Property DBHost '.' NLog.Layouts.Layout
+2023-08-18 19:05:10.9635 Trace  Scanning Property CommandText 'INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)' NLog.Layouts.Layout
+2023-08-18 19:05:10.9754 Trace  Scanning Property Parameters 'System.Collections.Generic.List`1[NLog.Targets.DatabaseParameterInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseParameterInfo]
+2023-08-18 19:05:10.9754 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-18 19:05:10.9848 Trace   Scanning Property Layout '${date}' NLog.Layouts.Layout
+2023-08-18 19:05:10.9848 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-18 19:05:10.9943 Trace   Scanning Property Layout '${message}' NLog.Layouts.Layout
+2023-08-18 19:05:10.9943 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-18 19:05:11.0033 Trace   Scanning Property Layout '${level}' NLog.Layouts.Layout
+2023-08-18 19:05:11.0033 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-18 19:05:11.0033 Trace   Scanning Property Layout '${exception}' NLog.Layouts.Layout
+2023-08-18 19:05:11.0163 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-18 19:05:11.0163 Trace   Scanning Property Layout '${stacktrace}' NLog.Layouts.Layout
+2023-08-18 19:05:11.0248 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-18 19:05:11.0248 Trace   Scanning Property Layout '${logger}' NLog.Layouts.Layout
+2023-08-18 19:05:11.0343 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2023-08-18 19:05:11.0343 Trace   Scanning Property Layout '${aspnet-request-url}' NLog.Layouts.Layout
+2023-08-18 19:05:11.0429 Trace  Scanning Property Parameters 'System.Collections.Generic.List`1[NLog.Targets.DatabaseParameterInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseParameterInfo]
+2023-08-18 19:05:11.0429 Trace  Scanning Property ConnectionProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseObjectPropertyInfo]
+2023-08-18 19:05:11.0602 Trace  Scanning Property ConnectionProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseObjectPropertyInfo]
+2023-08-18 19:05:11.0703 Trace  Scanning Property CommandProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseObjectPropertyInfo]
+2023-08-18 19:05:11.0757 Trace  Scanning Property CommandProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic.IList`1[NLog.Targets.DatabaseObjectPropertyInfo]
+2023-08-18 19:05:11.0826 Trace DatabaseTarget(Name=dbTarget) has 10 layouts
+2023-08-18 19:05:11.6130 Info Configuration initialized.
+2023-08-18 19:05:11.6261 Debug Targets configured when LogLevel >= Trace for Logger: Program
+2023-08-18 19:05:11.6261 Debug Logger Program [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:11.6353 Debug Logger Program [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:11.6353 Debug Logger Program [Info] => dbTarget consoleTarget
+2023-08-18 19:05:11.6446 Debug Logger Program [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:11.6446 Debug Logger Program [Error] => dbTarget consoleTarget
+2023-08-18 19:05:11.6536 Debug Logger Program [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:12.3197 Debug Hide assemblies for callsite
+2023-08-18 19:05:12.3246 Debug Skip loading NLogLoggingConfiguration from empty config section: NLog
+2023-08-18 19:05:12.3356 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2023-08-18 19:05:12.3356 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:12.3428 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:12.3428 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Info] => dbTarget consoleTarget
+2023-08-18 19:05:12.3428 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:12.3568 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => dbTarget consoleTarget
+2023-08-18 19:05:12.3568 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:12.3670 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2023-08-18 19:05:12.3726 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:12.3726 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:12.3828 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Info] => dbTarget consoleTarget
+2023-08-18 19:05:12.3828 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:12.3828 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => dbTarget consoleTarget
+2023-08-18 19:05:12.3960 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:12.3960 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Hosting.Lifetime
+2023-08-18 19:05:12.4064 Debug Logger Microsoft.Hosting.Lifetime [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:12.4064 Debug Logger Microsoft.Hosting.Lifetime [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:12.4145 Debug Logger Microsoft.Hosting.Lifetime [Info] => dbTarget consoleTarget
+2023-08-18 19:05:12.4145 Debug Logger Microsoft.Hosting.Lifetime [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:12.4239 Debug Logger Microsoft.Hosting.Lifetime [Error] => dbTarget consoleTarget
+2023-08-18 19:05:12.4239 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:12.4450 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer
+2023-08-18 19:05:12.4450 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:12.4529 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:12.4529 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Info] => dbTarget consoleTarget
+2023-08-18 19:05:12.4529 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:12.4628 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Error] => dbTarget consoleTarget
+2023-08-18 19:05:12.4628 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:12.4628 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware
+2023-08-18 19:05:12.4749 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:12.4749 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:12.4827 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Info] => dbTarget consoleTarget
+2023-08-18 19:05:12.4827 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:12.4827 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Error] => dbTarget consoleTarget
+2023-08-18 19:05:12.4945 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:12.4945 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.Kestrel
+2023-08-18 19:05:12.5036 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:12.5036 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:12.5036 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Info] => dbTarget consoleTarget
+2023-08-18 19:05:12.5155 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:12.5155 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Error] => dbTarget consoleTarget
+2023-08-18 19:05:12.5240 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:12.5240 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.Kestrel.BadRequests
+2023-08-18 19:05:12.5325 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:12.5325 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:12.5325 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Info] => dbTarget consoleTarget
+2023-08-18 19:05:12.5450 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:12.5450 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Error] => dbTarget consoleTarget
+2023-08-18 19:05:12.5527 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:12.5527 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2023-08-18 19:05:12.5527 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:12.5651 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:12.5651 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Info] => dbTarget consoleTarget
+2023-08-18 19:05:12.5734 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:12.5734 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Error] => dbTarget consoleTarget
+2023-08-18 19:05:12.5833 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:12.5833 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.Kestrel.Http2
+2023-08-18 19:05:12.5833 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:12.5965 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:12.6028 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Info] => dbTarget consoleTarget
+2023-08-18 19:05:12.6028 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:12.6147 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Error] => dbTarget consoleTarget
+2023-08-18 19:05:12.6147 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:12.6234 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.Kestrel.Http3
+2023-08-18 19:05:12.6234 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:12.6330 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:12.6330 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Info] => dbTarget consoleTarget
+2023-08-18 19:05:12.6467 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:12.6523 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Error] => dbTarget consoleTarget
+2023-08-18 19:05:12.6523 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:12.6691 Debug Targets configured when LogLevel >= Trace for Logger: Logger.API
+2023-08-18 19:05:12.6729 Debug Logger Logger.API [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:12.6729 Debug Logger Logger.API [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:12.6729 Debug Logger Logger.API [Info] => dbTarget consoleTarget
+2023-08-18 19:05:12.6860 Debug Logger Logger.API [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:12.6860 Debug Logger Logger.API [Error] => dbTarget consoleTarget
+2023-08-18 19:05:12.6941 Debug Logger Logger.API [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:12.7072 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2023-08-18 19:05:12.7072 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:12.7164 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:12.7164 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Info] => dbTarget consoleTarget
+2023-08-18 19:05:12.7260 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:12.7260 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Error] => dbTarget consoleTarget
+2023-08-18 19:05:12.7338 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:12.7788 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider
+2023-08-18 19:05:12.7827 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:12.7827 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:12.7827 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Info] => dbTarget consoleTarget
+2023-08-18 19:05:12.7946 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:12.7946 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Error] => dbTarget consoleTarget
+2023-08-18 19:05:12.8024 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:12.8024 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory
+2023-08-18 19:05:12.8024 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:12.8159 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:12.8159 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Info] => dbTarget consoleTarget
+2023-08-18 19:05:12.8232 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:12.8232 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Error] => dbTarget consoleTarget
+2023-08-18 19:05:12.8232 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:12.8481 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-18 19:05:13.3551 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-18 19:05:13.3812 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/18 19:05:12.837' (String)
+2023-08-18 19:05:13.3852 Trace   DatabaseTarget: Parameter: '@msg' = 'Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider' (String)
+2023-08-18 19:05:13.3852 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-18 19:05:13.3945 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-18 19:05:13.3945 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-08-18 19:05:13.4039 Trace Scanning SimpleLayout ' => '
+2023-08-18 19:05:13.4039 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2023-08-18 19:05:13.4130 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-08-18 19:05:13.4130 Trace   DatabaseTarget: Parameter: '@trace' = 'CallSiteVisitor`2.VisitCallSite => CallSiteRuntimeResolver.VisitRootCache => CallSiteVisitor`2.VisitCallSiteMain' (String)
+2023-08-18 19:05:13.4130 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory' (String)
+2023-08-18 19:05:13.4283 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-18 19:05:13.4324 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory
+2023-08-18 19:05:13.4324 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-18 19:05:13.4694 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-18 19:05:13.4741 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-18 19:05:13.4860 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2023-08-18 19:05:13.4860 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:13.4945 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:13.4945 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Info] => dbTarget consoleTarget
+2023-08-18 19:05:13.5023 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:13.5023 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Error] => dbTarget consoleTarget
+2023-08-18 19:05:13.5023 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:13.5166 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2023-08-18 19:05:13.5166 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:13.5246 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:13.5246 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Info] => dbTarget consoleTarget
+2023-08-18 19:05:13.5341 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:13.5341 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Error] => dbTarget consoleTarget
+2023-08-18 19:05:13.5341 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:13.5904 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-18 19:05:13.5955 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-18 19:05:13.5955 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/18 19:05:13.590' (String)
+2023-08-18 19:05:13.6053 Trace   DatabaseTarget: Parameter: '@msg' = 'Hosting starting' (String)
+2023-08-18 19:05:13.6053 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-18 19:05:13.6164 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-18 19:05:13.6164 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <RunAsync>d__4.MoveNext => Host.StartAsync' (String)
+2023-08-18 19:05:13.6248 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.Extensions.Hosting.Internal.Host' (String)
+2023-08-18 19:05:13.6248 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-18 19:05:13.6337 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.Extensions.Hosting.Internal.Host
+2023-08-18 19:05:13.6337 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-18 19:05:13.6535 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-18 19:05:13.6535 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-18 19:05:13.6646 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2023-08-18 19:05:13.6646 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:13.6735 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:13.6735 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Info] => dbTarget consoleTarget
+2023-08-18 19:05:13.6735 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:13.6862 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Error] => dbTarget consoleTarget
+2023-08-18 19:05:13.6862 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:13.7112 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2023-08-18 19:05:13.7149 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:13.7149 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:13.7261 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Info] => dbTarget consoleTarget
+2023-08-18 19:05:13.7261 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:13.7368 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Error] => dbTarget consoleTarget
+2023-08-18 19:05:13.7368 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:13.7634 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware
+2023-08-18 19:05:13.7634 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:13.7734 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:13.7734 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Info] => dbTarget consoleTarget
+2023-08-18 19:05:13.7839 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:13.7839 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Error] => dbTarget consoleTarget
+2023-08-18 19:05:13.7949 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:13.8262 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2023-08-18 19:05:13.8262 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:13.8351 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:13.8351 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Info] => dbTarget consoleTarget
+2023-08-18 19:05:13.8427 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:13.8427 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Error] => dbTarget consoleTarget
+2023-08-18 19:05:13.8427 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:13.8626 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware
+2023-08-18 19:05:13.8626 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:13.8626 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:13.8752 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Info] => dbTarget consoleTarget
+2023-08-18 19:05:13.8752 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:13.8847 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Error] => dbTarget consoleTarget
+2023-08-18 19:05:13.8847 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:13.8955 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware
+2023-08-18 19:05:13.8955 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:13.9045 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:13.9045 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Info] => dbTarget consoleTarget
+2023-08-18 19:05:13.9132 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:13.9132 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Error] => dbTarget consoleTarget
+2023-08-18 19:05:13.9227 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:13.9392 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets
+2023-08-18 19:05:13.9432 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Trace] => dbTarget consoleTarget
+2023-08-18 19:05:13.9432 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Debug] => dbTarget consoleTarget
+2023-08-18 19:05:13.9566 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Info] => dbTarget consoleTarget
+2023-08-18 19:05:13.9629 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Warn] => dbTarget consoleTarget
+2023-08-18 19:05:13.9629 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Error] => dbTarget consoleTarget
+2023-08-18 19:05:13.9740 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Fatal] => dbTarget consoleTarget
+2023-08-18 19:05:13.9954 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-18 19:05:14.0042 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-18 19:05:14.0042 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/18 19:05:13.995' (String)
+2023-08-18 19:05:14.0142 Trace   DatabaseTarget: Parameter: '@msg' = 'Now listening on: http://[::]:80' (String)
+2023-08-18 19:05:14.0142 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-18 19:05:14.0234 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-18 19:05:14.0234 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <StartAsync>d__12.MoveNext => GenericWebHostService.StartAsync' (String)
+2023-08-18 19:05:14.0234 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.Hosting.Lifetime' (String)
+2023-08-18 19:05:14.0351 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-18 19:05:14.0351 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.Hosting.Lifetime
+2023-08-18 19:05:14.0430 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-18 19:05:14.0651 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-18 19:05:14.0651 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-18 19:05:14.0746 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-18 19:05:14.0746 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-18 19:05:14.0863 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/18 19:05:14.074' (String)
+2023-08-18 19:05:14.0863 Trace   DatabaseTarget: Parameter: '@msg' = 'Loaded hosting startup assembly Logger.API' (String)
+2023-08-18 19:05:14.0957 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-18 19:05:14.0957 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-18 19:05:14.1136 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <StartAsync>d__12.MoveNext => GenericWebHostService.StartAsync' (String)
+2023-08-18 19:05:14.1136 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.AspNetCore.Hosting.Diagnostics' (String)
+2023-08-18 19:05:14.1308 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-18 19:05:14.1386 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2023-08-18 19:05:14.1478 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-18 19:05:14.1645 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-18 19:05:14.1645 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-18 19:05:14.1780 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-18 19:05:14.1873 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-18 19:05:14.1946 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/18 19:05:14.178' (String)
+2023-08-18 19:05:14.1946 Trace   DatabaseTarget: Parameter: '@msg' = 'Application started. Press Ctrl+C to shut down.' (String)
+2023-08-18 19:05:14.2067 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-18 19:05:14.2067 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-18 19:05:14.2199 Trace   DatabaseTarget: Parameter: '@trace' = 'CancellationTokenSource.ExecuteCallbackHandlers => ExecutionContext.RunInternal => ConsoleLifetime.OnApplicationStarted' (String)
+2023-08-18 19:05:14.2277 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.Hosting.Lifetime' (String)
+2023-08-18 19:05:14.2342 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-18 19:05:14.2431 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.Hosting.Lifetime
+2023-08-18 19:05:14.2546 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-18 19:05:14.2810 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-18 19:05:14.2878 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-18 19:05:14.2939 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-18 19:05:14.2939 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-18 19:05:14.3060 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/18 19:05:14.293' (String)
+2023-08-18 19:05:14.3060 Trace   DatabaseTarget: Parameter: '@msg' = 'Hosting environment: Development' (String)
+2023-08-18 19:05:14.3168 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-18 19:05:14.3234 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-18 19:05:14.3234 Trace   DatabaseTarget: Parameter: '@trace' = 'CancellationTokenSource.ExecuteCallbackHandlers => ExecutionContext.RunInternal => ConsoleLifetime.OnApplicationStarted' (String)
+2023-08-18 19:05:14.3356 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.Hosting.Lifetime' (String)
+2023-08-18 19:05:14.3456 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-18 19:05:14.3528 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.Hosting.Lifetime
+2023-08-18 19:05:14.3528 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-18 19:05:14.4018 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-18 19:05:14.4176 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-18 19:05:14.4253 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-18 19:05:14.4370 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-18 19:05:14.4485 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/18 19:05:14.425' (String)
+2023-08-18 19:05:14.4534 Trace   DatabaseTarget: Parameter: '@msg' = 'Content root path: /app' (String)
+2023-08-18 19:05:14.4534 Trace   DatabaseTarget: Parameter: '@level' = 'Info' (String)
+2023-08-18 19:05:14.4718 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-18 19:05:14.4839 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <StartAsync>d__12.MoveNext => ApplicationLifetime.NotifyStarted' (String)
+2023-08-18 19:05:14.4933 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.Hosting.Lifetime' (String)
+2023-08-18 19:05:14.5048 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-18 19:05:14.5125 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.Hosting.Lifetime
+2023-08-18 19:05:14.5238 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-18 19:05:14.5556 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-18 19:05:14.5633 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2023-08-18 19:05:14.5633 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2023-08-18 19:05:14.5899 Trace DatabaseTarget(Name=dbTarget): Executing Text: INSERT INTO Logs(CreatedOn,Message,Level,Exception,StackTrace,Logger,Url) VALUES (@datetime,@msg,@level,@exception,@trace,@logger,@url)
+2023-08-18 19:05:14.6005 Trace   DatabaseTarget: Parameter: '@datetime' = '2023/08/18 19:05:14.563' (String)
+2023-08-18 19:05:14.6078 Trace   DatabaseTarget: Parameter: '@msg' = 'Hosting started' (String)
+2023-08-18 19:05:14.6078 Trace   DatabaseTarget: Parameter: '@level' = 'Debug' (String)
+2023-08-18 19:05:14.6155 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2023-08-18 19:05:14.6240 Trace   DatabaseTarget: Parameter: '@trace' = 'AsyncMethodBuilderCore.Start => <RunAsync>d__4.MoveNext => Host.StartAsync' (String)
+2023-08-18 19:05:14.6240 Trace   DatabaseTarget: Parameter: '@logger' = 'Microsoft.Extensions.Hosting.Internal.Host' (String)
+2023-08-18 19:05:14.6372 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2023-08-18 19:05:14.6444 Debug No available HttpContext, because outside valid request context. Logger: Microsoft.Extensions.Hosting.Internal.Host
+2023-08-18 19:05:14.6444 Trace   DatabaseTarget: Parameter: '@url' = '' (String)
+2023-08-18 19:05:14.6663 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2023-08-18 19:05:14.6748 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).

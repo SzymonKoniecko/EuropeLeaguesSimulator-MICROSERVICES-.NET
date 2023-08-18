@@ -1,5 +1,10 @@
+using Microsoft.EntityFrameworkCore;
 using NLog.Extensions.Logging;
 using NLog.Web;
+using WebScrapingIntegration.API.Contexts;
+using WebScrapingIntegration.API.Interfaces;
+using WebScrapingIntegration.API.Repositories;
+using WebScrapingIntegration.API.Services;
 
 var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
 try
@@ -8,10 +13,12 @@ try
 
     // Add services to the container.
     builder.Services.AddControllers();
-    var connString = builder.Configuration.GetConnectionString("LoggerDocker");
-    var connStringLocal = builder.Configuration.GetConnectionString("LoggerLocal");
-    /*builder.Services.AddDbContext<LoggerContext>(options =>
-        options.UseSqlServer(connString));*/
+    var loggerConnString = builder.Configuration.GetConnectionString("LoggerDocker");
+    var loggerConnStringLocal = builder.Configuration.GetConnectionString("LoggerLocal");
+    var webScrapConnString = builder.Configuration.GetConnectionString("LoggerDocker");
+    var webScrapStringLocal = builder.Configuration.GetConnectionString("LoggerLocal");
+    builder.Services.AddDbContext<WebScrapingProcessesContext>(options =>
+        options.UseSqlServer(webScrapStringLocal));
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
     builder.Services.AddLogging(builder =>
@@ -21,6 +28,8 @@ try
         builder.AddConsole();
         builder.AddNLog();
     });
+    builder.Services.AddTransient<IClubScrapingService, ClubScrapingService>();
+    builder.Services.AddTransient<IWebScrapingProcessesRepository, WebScrapingProcessesRepository>();
     var app = builder.Build();
 
     // Configure the HTTP request pipeline.
