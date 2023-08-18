@@ -43,7 +43,7 @@ namespace WebScrapingIntegration.API.Controllers
                 //string href = item.GetAttributeValue("href", "");
                 var clubHtml = httpClient.GetStringAsync(baseWikiUrl + href).Result;
                 htmlDocument.LoadHtml(clubHtml);
-                var trNodesOfClub = htmlDocument.DocumentNode.SelectNodes("//table[@class=\"infobox vcard\"]/tbody//tr").Take(8);
+                var trNodesOfClub = htmlDocument.DocumentNode.SelectNodes("//table[@class=\"infobox vcard\"]/tbody//tr").Take(6);
                 foreach (var tr in trNodesOfClub)
                 {
                     if (tr.FirstChild.InnerText == "Full name")
@@ -58,11 +58,11 @@ namespace WebScrapingIntegration.API.Controllers
                     {
                         clubDetails.NickName = ReplaceNonTextWithSpaces(tr.FirstChild.NextSibling.InnerText, false);
                     }
-                    else if (tr.FirstChild.InnerText == "Manager" || tr.FirstChild.InnerHtml == "Head coach")
+                    else if (tr.FirstChild.InnerHtml == "Manager" || tr.FirstChild.InnerHtml == "Head coach")
                     {
                         clubDetails.Manager = ReplaceNonTextWithSpaces(tr.FirstChild.NextSibling.InnerText, true);
                     }
-                    else if (tr.FirstChild.InnerText == "League")
+                    else if (tr.FirstChild.InnerHtml == "League")
                     {
                         clubDetails.League = ReplaceNonTextWithSpaces(tr.FirstChild.NextSibling.InnerText, false);
                     }
@@ -106,6 +106,8 @@ namespace WebScrapingIntegration.API.Controllers
                         }
                     }
                 }
+                clubDetails.Manager = "ToFix";
+                clubDetails.League = "ToFix";
                 result.Add(clubDetails);
                 clubDetails = new();
                 Thread.Sleep(100);
