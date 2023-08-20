@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RabbitMQ.Client;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -9,18 +10,14 @@ namespace ProcessManager.API.Controllers
     public class ProcessController : ControllerBase
     {
         private readonly ILogger<ProcessController> _logger;
+        private readonly IConnection _rabbitConnection;
 
-        public ProcessController(ILogger<ProcessController> logger)
+        public ProcessController(
+            ILogger<ProcessController> logger,
+            IConnection connection)
         {
             _logger = logger;
+            _rabbitConnection = connection;
         }
-        [HttpGet]
-        public IEnumerable<string> GetClubsById([FromQuery] string query)
-        {
-
-            _logger.LogInformation($"Search process started for query = {query}");
-            return new string[] { "value1", "value2" };
-        }
-
     }
 }

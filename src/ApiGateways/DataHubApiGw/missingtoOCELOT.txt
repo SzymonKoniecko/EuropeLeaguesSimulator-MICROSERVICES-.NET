@@ -1,0 +1,40 @@
+,
+  "Aggregates": [
+    // Konfiguracja agregacji danych
+    {
+      // Klucze tras przekierowañ, które maj¹ byæ agregowane
+      "RouteKeys": [ "NeedToScrapClubData" ],
+      // Wzorzec œcie¿ki Ÿród³owej dla API Gateway
+      "UpstreamPathTemplate": "/api/Club/GetClubByName/{query}",
+      // Nazwa dostawcy agregatora (FallbackAggregator)
+      "Aggregator": "FallbackAggregator"
+    }
+  ],
+  "Aggregators": [
+    {
+      "Provider": "ScrapToDataHub",
+      "Configuration": {
+        "Key": "ScrapToDataHub",
+        "RequestBuilder": {
+          "Queries": [
+            {
+              "Key": "query",
+              "Value": "{query}"
+            }
+          ],
+          "Method": "GET",
+          "Data": "{}",
+          "Headers": {},
+          "UseQueryString": true
+        },
+        "ResponseAggregator": {
+          "AggregatorType": "Fallback"
+        },
+        "FallbackRoute": {
+          "RouteKey": "NeedToScrapClubData",
+          "UpstreamPathTemplate": "/WebScrapingIntegration/api/GetClubByName/{query}}",
+          "ReRouteIsCaseSensitive": false
+        }
+      }
+    }
+  ]

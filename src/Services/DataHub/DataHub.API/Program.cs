@@ -1,3 +1,4 @@
+using DataHub.API;
 using DataHub.API.Contexts;
 using Microsoft.EntityFrameworkCore;
 using NLog.Extensions.Logging;
@@ -23,6 +24,8 @@ try
         builder.AddConsole();
         builder.AddNLog();
     });
+    builder.Services.Configure<RabbitMQOptions>(builder.Configuration.GetSection("RabbitMQ"));
+
     var app = builder.Build();
 
     // Configure the HTTP request pipeline.

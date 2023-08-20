@@ -1,13 +1,12 @@
-
 using NLog.Extensions.Logging;
 using NLog.Web;
 using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
 
 var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
 try
 {
     var builder = WebApplication.CreateBuilder(args);
-    var app = builder.Build();
     builder.Services.AddLogging(builder =>
     {
         builder.ClearProviders();
@@ -15,8 +14,20 @@ try
         builder.AddConsole();
         builder.AddNLog();
     });
-    builder.Services.AddOcelot();
-    app.MapGet("/", () => "Hello World!");
+    builder.Configuration.SetBasePath(builder.Environment.ContentRootPath)
+    .AddJsonFile("ocelot.Local.json", optional: false, reloadOnChange: true)
+    .AddEnvironmentVariables();
+    builder.Services.AddOcelot(builder.Configuration);
+    var app = builder.Build();
+
+
+    app.UseHttpsRedirection();
+
+    app.UseAuthorization();
+
+    app.MapControllers();
+
+    await app.UseOcelot();
     app.Run();
 }
 catch (Exception exception)

@@ -13,7 +13,8 @@
         "matchmanagment.api": "StartDebugging",
         "logger.api": "StartDebugging",
         "datahub.api": "StartDebugging",
-        "cache.api": "StartDebugging"
+        "cache.api": "StartDebugging",
+        "datahubapigw": "StartDebugging"
       }
     }
   }

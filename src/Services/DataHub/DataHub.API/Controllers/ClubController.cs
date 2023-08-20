@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DataHub.API.Models;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -10,16 +11,22 @@ namespace DataHub.API.Controllers
     {
         private readonly ILogger<ClubController> _logger;
 
-        public ClubController(ILogger<ClubController> logger)
+        public ClubController(
+            ILogger<ClubController> logger)
         {
             _logger = logger;
         }
-        // GET: api/<ClubController>
-        [HttpGet(Name = "GetClubByName")]
-        public IEnumerable<string> GetClubByName([FromQuery] string query)
+        [HttpGet]
+        public async Task<ActionResult> GetResult()
         {
             _logger.LogError(new Exception(), "erorr");
-            return new string[] { "value1", "value2" };
+            return Ok();
+        }
+        [HttpGet("{query:string}")]
+        public async Task<ActionResult<IEnumerable<ClubDetails>>> GetClubByName([FromRoute] string query)
+        {
+            _logger.LogError(new Exception(), "erorr");
+            return null;
         }
 
     }

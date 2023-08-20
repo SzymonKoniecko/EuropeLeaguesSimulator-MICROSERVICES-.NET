@@ -1,0 +1,45 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:800"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/Club",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "datahubapi",
+          "Port": 80
+        }
+      ],
+      //"Key": "NeedToScrapClubData",
+      "DownstreamPathTemplate": "/api/Club"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Club/{query:string}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "datahubapi",
+          "Port": 80
+        }
+      ],
+      //"Key": "NeedToScrapClubData",
+      "DownstreamPathTemplate": "/api/Club/{query:string}"
+    },
+    {
+      "DownstreamPathTemplate": "/api/ClubScraping/GetClubByName/{query:string}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webscrapingintegrationapi",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/ClubScraping/GetClubByName/{query:string}",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ]
+}

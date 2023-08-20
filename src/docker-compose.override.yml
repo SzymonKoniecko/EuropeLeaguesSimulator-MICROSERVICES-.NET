@@ -21,8 +21,8 @@ services:
   webscrapingintegration.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "8003:80"
+#    ports:
+#      - "8003:80"
 
 
 #  settings.api:
@@ -43,7 +43,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "8001:80"
+      - "8099:80"
 
 
 #  matchmanagment.api:
@@ -63,13 +63,21 @@ services:
   datahub.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "8002:80"
+#    ports:
+#      - "8002:80"
 
+
+  datahubapigw:
+    environment:
+    - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+    - "8001:80"
 #
 #  cache.api:
 #    environment:
 #      - ASPNETCORE_ENVIRONMENT=Development
 #    ports:
 #      - "8009:80"
+
+
 

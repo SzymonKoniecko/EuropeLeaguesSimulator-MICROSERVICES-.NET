@@ -1,5 +1,8 @@
+using DataHub.API;
+using Microsoft.Extensions.Options;
 using NLog.Extensions.Logging;
 using NLog.Web;
+using RabbitMQ.Client;
 
 var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
 try
@@ -20,6 +23,19 @@ try
         builder.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
         builder.AddConsole();
         builder.AddNLog();
+    });
+    builder.Services.Configure<RabbitMQOptions>(builder.Configuration.GetSection("RabbitMQ"));
+    builder.Services.AddSingleton<IConnection>(sp =>
+    {
+        var options = sp.GetRequiredService<IOptions<RabbitMQOptions>>().Value;
+        var factory = new ConnectionFactory
+        {
+            HostName = options.HostName,
+            Port = options.Port, // Set the port
+            UserName = options.UserName,
+            Password = options.Password,
+        };
+        return factory.CreateConnection();
     });
     var app = builder.Build();
 

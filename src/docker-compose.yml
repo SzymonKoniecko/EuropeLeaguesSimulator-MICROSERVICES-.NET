@@ -31,6 +31,7 @@ services:
 
   webscrapingintegration.api:
     image: ${DOCKER_REGISTRY-}webscrapingintegrationapi
+    container_name: webscrapingintegrationapi
     build:
       context: .
       dockerfile: Services/WebScrapingIntegration/WebScrapingIntegration.API/Dockerfile
@@ -57,6 +58,7 @@ services:
 #
 
   processmanager.api:
+    container_name: processmanagerapi
     image: ${DOCKER_REGISTRY-}processmanagerapi
     build:
       context: .
@@ -73,9 +75,8 @@ services:
 #    networks:
 #    - tmpNetwork
 
-
   logger.api:
-    container_name: Logger.API
+    container_name: loggerapi
     image: ${DOCKER_REGISTRY-}loggerapi
     build:
       context: .
@@ -93,6 +94,7 @@ services:
     
   datahub.api:
     image: ${DOCKER_REGISTRY-}datahubapi
+    container_name: datahubapi
     build:
       context: .
       dockerfile: Services/DataHub/DataHub.API/Dockerfile
@@ -100,6 +102,16 @@ services:
     - DB_HOST=mssql-container
     - DB_NAME_DATAHUB=DataHub
     - DB_SA_PASSWORD=Zaq1@wsx
+    networks:
+    - tmpNetwork
+
+
+  datahubapigw:
+    image: ${DOCKER_REGISTRY-}datahubapigw
+    container_name: datahubapigw
+    build:
+      context: .
+      dockerfile: ApiGateways/DataHubApiGw/Dockerfile
     networks:
     - tmpNetwork
 
@@ -128,12 +140,28 @@ services:
 #    - mssql-container
 #    networks:
 #    - tmpNetwork
-    
+#  rabbitmq:
+#    image: rabbitmq:3-management-alpine
+#    container_name: 'rabbitmqServer'
+#    ports:
+#        - 5672:5672
+#        - 15672:15672
+#    volumes:
+#        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+#        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+#    networks:
+#        - tmpNetwork
+#
+#
+#  
+
 
 
   
+
 volumes:
     sql-data:
 
 networks:
   tmpNetwork:
+
