@@ -115,6 +115,14 @@ services:
     networks:
     - tmpNetwork
 
+  webscrapingintegrationgw:
+    image: ${DOCKER_REGISTRY-}webscrapingintegrationgw
+    container_name: webscrapingintegrationgw
+    build:
+      context: .
+      dockerfile: ApiGateways/WebScrapingIntegrationGw/Dockerfile
+    networks:
+    - tmpNetwork
 #
 #  cache.api:
 #    image: ${DOCKER_REGISTRY-}cacheapi
@@ -157,11 +165,10 @@ services:
 
 
 
-  
-
 volumes:
     sql-data:
 
 networks:
   tmpNetwork:
+
 

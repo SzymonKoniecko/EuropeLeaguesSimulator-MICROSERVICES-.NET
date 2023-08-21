@@ -51,7 +51,9 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways", "{B3A4E674-F157-4E6E-B4A9-74C028672E02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataHubApiGw", "ApiGateways\DataHubApiGw\DataHubApiGw.csproj", "{90EB5493-23B6-4A66-8907-BD30865A97A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataHubApiGw", "ApiGateways\DataHubApiGw\DataHubApiGw.csproj", "{90EB5493-23B6-4A66-8907-BD30865A97A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScrapingIntegrationGw", "ApiGateways\WebScrapingIntegrationGw\WebScrapingIntegrationGw.csproj", "{273F124C-9D8A-4899-BDF3-4D9D5CAA88A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,6 +109,10 @@ Global
 		{90EB5493-23B6-4A66-8907-BD30865A97A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90EB5493-23B6-4A66-8907-BD30865A97A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90EB5493-23B6-4A66-8907-BD30865A97A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{273F124C-9D8A-4899-BDF3-4D9D5CAA88A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{273F124C-9D8A-4899-BDF3-4D9D5CAA88A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{273F124C-9D8A-4899-BDF3-4D9D5CAA88A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{273F124C-9D8A-4899-BDF3-4D9D5CAA88A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -134,6 +140,7 @@ Global
 		{409EDD7E-32BB-4999-B158-21ECA4CD510E} = {AEEE2C34-CCB3-457B-94BE-6379F65C352C}
 		{D338F12F-1D90-4B88-843A-9C75DC59CD35} = {92137F97-5EB2-4654-8D40-0FF010EB9D5D}
 		{90EB5493-23B6-4A66-8907-BD30865A97A6} = {B3A4E674-F157-4E6E-B4A9-74C028672E02}
+		{273F124C-9D8A-4899-BDF3-4D9D5CAA88A2} = {B3A4E674-F157-4E6E-B4A9-74C028672E02}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9031BEEA-7289-45C2-8B13-C74B50AD0490}

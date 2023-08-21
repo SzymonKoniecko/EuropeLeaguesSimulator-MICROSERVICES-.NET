@@ -25,8 +25,7 @@ namespace WebScrapingIntegration.API.Controllers
         /// </summary>
         /// <param name="query"></param>
         /// <returns></returns>
-        [Route("/api/ClubScraping/GetClubByName/{query}", Name = "GetClubByName")]
-        [HttpGet]
+        [HttpGet("{query:alpha}")]
         public async Task<ActionResult<IEnumerable<ClubDetails>>> GetClubByName([FromRoute] string query)
         {
             var result = _clubScrapingService.GetClubDetailsByScraping(query);

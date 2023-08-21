@@ -11,6 +11,14 @@ namespace DataHub.API.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Club>()
+                .HasKey(c => c.Id);
+            modelBuilder.Entity<Club>(entity =>
+            {
+                entity.HasOne(c => c.Stadium)
+                    .WithOne(s => s.Club)
+                    .HasForeignKey<Club>(c => c.StadiumId);
+            });
         }
     }
 }
