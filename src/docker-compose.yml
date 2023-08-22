@@ -123,15 +123,19 @@ services:
       dockerfile: ApiGateways/WebScrapingIntegrationGw/Dockerfile
     networks:
     - tmpNetwork
-#
-#  cache.api:
-#    image: ${DOCKER_REGISTRY-}cacheapi
-#    build:
-#      context: .
-#      dockerfile: Services/Cache/Cache.API/Dockerfile
-#    networks:
-#    - tmpNetwork
-#
+
+    
+  redis:
+    container_name: redis
+    image: redis:latest
+    restart: always
+    command: redis-server --save 20 1 --loglevel warning --requirepass Zaq1@wsx
+    networks:
+    - tmpNetwork
+    volumes: 
+      - cache:/data
+
+
 ##  camunda:
 ##    image: camunda/camunda-bpm-platform:latest
 ##    container_name: camunda
@@ -167,6 +171,7 @@ services:
 
 volumes:
     sql-data:
+    cache:
 
 networks:
   tmpNetwork:

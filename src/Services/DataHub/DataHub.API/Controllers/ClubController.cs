@@ -1,7 +1,9 @@
 ﻿using DataHub.API.Interfaces;
 using DataHub.API.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
+using System.Text;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -15,24 +17,37 @@ namespace DataHub.API.Controllers
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IConfiguration _configuration;
         private readonly IClubService _clubService;
+        private readonly IDistributedCache _cache;
 
         public ClubController(
             ILogger<ClubController> logger,
             IHttpClientFactory httpClientFactory,
             IConfiguration configuration,
-            IClubService clubService)
+            IClubService clubService,
+            IDistributedCache cache)
         {
             _logger = logger;
             _httpClientFactory = httpClientFactory;
             _configuration = configuration;
             _clubService = clubService;
+            _cache = cache;
         }
         [HttpGet("{query:alpha}")]
         public async Task<ActionResult<ClubDetails>> GetClubsByName([FromRoute] string query)
         {
+            var cacheJson = GetFromCache(query);
+            if (!String.IsNullOrEmpty(cacheJson))
+            {
+                var cachedQueryResponse = JsonConvert.DeserializeObject<List<ClubDetails>>(cacheJson);
+                if (cachedQueryResponse.Count > 0)
+                {
+                    return Ok(cachedQueryResponse);
+                }
+            }
             var matchedClubs = _clubService.GetClubsDetailsByName(query);
             if (matchedClubs.Count > 0)
             {
+                SendToCache(query, JsonConvert.SerializeObject(matchedClubs));
                 return Ok(matchedClubs);
             }
             else
@@ -64,9 +79,10 @@ namespace DataHub.API.Controllers
                         if (result is not null)
                         {
                             _clubService.SaveClubDetails(result.ToList());
+                            SendToCache(query, JsonConvert.SerializeObject(result.ToList()));
                         }
                         httpClient.Dispose();
-                        return Ok(_clubService.GetClubsDetailsByName(query));
+                        return Ok(result.ToList());
                     }
                     else
                     {
@@ -81,6 +97,19 @@ namespace DataHub.API.Controllers
                 }
             }
 
+        }
+        private async Task<string> SendToCache(string key, string json)
+        {
+            var dataToCache = Encoding.UTF8.GetBytes(json);
+            DistributedCacheEntryOptions options = new DistributedCacheEntryOptions()
+                .SetAbsoluteExpiration(DateTime.Now.AddMinutes(5))
+                .SetSlidingExpiration(TimeSpan.FromMinutes(3));
+            await _cache.SetAsync(key, dataToCache, options);
+            return key;
+        }
+        private string GetFromCache(string key)
+        {
+            return _cache.GetString(key);
         }
     }
 }

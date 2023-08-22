@@ -72,12 +72,6 @@ services:
     - ASPNETCORE_ENVIRONMENT=Development
     ports:
     - "7001:80"
-#
-#  cache.api:
-#    environment:
-#      - ASPNETCORE_ENVIRONMENT=Development
-#    ports:
-#      - "8009:80"
 
 
   webscrapingintegrationgw:

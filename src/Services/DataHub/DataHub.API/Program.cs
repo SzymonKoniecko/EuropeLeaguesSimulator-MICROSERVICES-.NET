@@ -22,11 +22,13 @@ try
         options.UseSqlServer(dataHubConnString);
     }
     );
+    builder.Services.AddStackExchangeRedisCache(options => { options.Configuration = $"{builder.Configuration["RedisUrl"]}"; });
     builder.Services.AddScoped<DataHubMigration>();
     builder.Services.AddTransient<IClubRepository, ClubRepository>();
     builder.Services.AddTransient<IClubService, ClubService>();
     builder.Services.AddHttpClient();
     builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+    builder.Services.AddDistributedMemoryCache();
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
     builder.Services.AddLogging(builder =>
