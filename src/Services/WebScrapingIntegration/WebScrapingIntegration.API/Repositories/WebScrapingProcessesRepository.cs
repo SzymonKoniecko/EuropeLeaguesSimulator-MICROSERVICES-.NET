@@ -17,6 +17,10 @@ namespace WebScrapingIntegration.API.Repositories
             _logger = logger;
             _context = context;
         }
+        public WebScrapingProces GetScrapingProcesByGivenQuery(string query)
+        {
+            return _context.WebScrapingProces.FirstOrDefault(wsp => wsp.GivenQuery.Equals(query));
+        }
         public void LogInformationAboutScraping(WebScrapingProces webScrapingProces)
         {
             try

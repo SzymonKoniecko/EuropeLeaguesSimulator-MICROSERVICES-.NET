@@ -15,10 +15,10 @@ try
     builder.Services.AddControllers();
     var loggerConnString = builder.Configuration.GetConnectionString("LoggerDocker");
     var loggerConnStringLocal = builder.Configuration.GetConnectionString("LoggerLocal");
-    var webScrapConnString = builder.Configuration.GetConnectionString("LoggerDocker");
-    var webScrapStringLocal = builder.Configuration.GetConnectionString("LoggerLocal");
+    var webScrapConnString = builder.Configuration.GetConnectionString("WebScrapingIntegrationDocker");
+    var webScrapConnStringLocal = builder.Configuration.GetConnectionString("WebScrapingIntegrationLocal");
     builder.Services.AddDbContext<WebScrapingProcessesContext>(options =>
-        options.UseSqlServer(webScrapStringLocal));
+        options.UseSqlServer(webScrapConnString));
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
     builder.Services.AddLogging(builder =>

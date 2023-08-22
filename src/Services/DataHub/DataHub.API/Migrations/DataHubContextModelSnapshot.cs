@@ -45,6 +45,7 @@ namespace DataHub.API.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NickName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("StadiumId")

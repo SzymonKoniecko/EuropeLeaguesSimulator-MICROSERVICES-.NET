@@ -47,7 +47,7 @@ namespace WebScrapingIntegration.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("WebScrapingProcesses");
+                    b.ToTable("WebScrapingProces");
                 });
 #pragma warning restore 612, 618
         }

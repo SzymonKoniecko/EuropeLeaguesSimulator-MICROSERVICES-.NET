@@ -9,7 +9,7 @@ namespace WebScrapingIntegration.API.Contexts
         {
 
         }
-        DbSet<WebScrapingProces> WebScrapingProcesses { get; set; }
+        public DbSet<WebScrapingProces> WebScrapingProces { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

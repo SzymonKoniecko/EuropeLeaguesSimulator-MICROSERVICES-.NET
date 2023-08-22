@@ -1,6 +1,7 @@
 using DataHub.API;
 using DataHub.API.Contexts;
 using DataHub.API.Interfaces;
+using DataHub.API.Repositories;
 using DataHub.API.Services;
 using Microsoft.EntityFrameworkCore;
 using NLog.Extensions.Logging;
@@ -22,6 +23,7 @@ try
     }
     );
     builder.Services.AddScoped<DataHubMigration>();
+    builder.Services.AddTransient<IClubRepository, ClubRepository>();
     builder.Services.AddTransient<IClubService, ClubService>();
     builder.Services.AddHttpClient();
     builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

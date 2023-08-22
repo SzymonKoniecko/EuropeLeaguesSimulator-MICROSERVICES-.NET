@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using DataHub.API.Contexts;
 using DataHub.API.Entities;
 using DataHub.API.Interfaces;
 using DataHub.API.Models;
@@ -8,34 +7,41 @@ namespace DataHub.API.Services
 {
     public class ClubService : IClubService
     {
-        private readonly DataHubContext _context;
         private readonly ILogger<ClubService> _logger;
         private readonly IMapper _mapper;
+        private readonly IClubRepository _clubRepository;
 
         public ClubService(
-            DataHubContext context,
             ILogger<ClubService> logger,
-            IMapper mapper)
+            IMapper mapper,
+            IClubRepository clubRepository)
         {
-            _context = context;
             _logger = logger;
             _mapper = mapper;
+            _clubRepository = clubRepository;
         }
         public List<ClubDetails> GetClubsDetailsByName(string query)
         {
-            //var clubDetails = _context.Club.
-
-            return null;
+            var dbResult = _clubRepository.GetClubsDetailsByName(query);
+            if (dbResult == null)
+            {
+                return null;
+            }
+            List<ClubDetails> matchedClubDetails = new List<ClubDetails>();
+            foreach (var item in dbResult)
+            {
+                matchedClubDetails.Add(_mapper.Map<ClubDetails>(_mapper.Map<ClubDto>(item)));
+            }
+            return matchedClubDetails;
         }
         public void SaveClubDetails(List<ClubDetails> clubDetails)
         {
-            List<Club> clubDtos = new List<Club>();
+            List<Club> clubs = new List<Club>();
             clubDetails.ForEach(cd =>
             {
-                clubDtos.Add(_mapper.Map<Club>(_mapper.Map<ClubDto>(cd)));
+                clubs.Add(_mapper.Map<Club>(_mapper.Map<ClubDto>(cd)));
             });
-            _context.AddRange(clubDtos);
-            _context.SaveChanges();
+            _clubRepository.SaveClubDetails(clubs);
         }
     }
 }
