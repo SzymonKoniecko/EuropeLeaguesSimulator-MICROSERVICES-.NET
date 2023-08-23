@@ -79,7 +79,9 @@ namespace DataHub.API.Controllers
                         if (result is not null)
                         {
                             _clubService.SaveClubDetails(result.ToList());
-                            SendToCache(query, JsonConvert.SerializeObject(result.ToList()));
+                            List<ClubDetails> newClubsDetails = _clubService.GetClubsDetailsByName(query);
+                            SendToCache(query, JsonConvert.SerializeObject(newClubsDetails));
+                            return Ok(newClubsDetails);
                         }
                         httpClient.Dispose();
                         return Ok(result.ToList());
@@ -102,7 +104,7 @@ namespace DataHub.API.Controllers
         {
             var dataToCache = Encoding.UTF8.GetBytes(json);
             DistributedCacheEntryOptions options = new DistributedCacheEntryOptions()
-                .SetAbsoluteExpiration(DateTime.Now.AddMinutes(5))
+                .SetAbsoluteExpiration(DateTime.Now.AddMinutes(1))
                 .SetSlidingExpiration(TimeSpan.FromMinutes(3));
             await _cache.SetAsync(key, dataToCache, options);
             return key;

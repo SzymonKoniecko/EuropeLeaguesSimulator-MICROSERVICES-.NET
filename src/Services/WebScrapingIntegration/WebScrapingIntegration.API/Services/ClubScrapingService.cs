@@ -21,14 +21,14 @@ namespace WebScrapingIntegration.API.Services
         }
         public IEnumerable<ClubDetails> GetClubDetailsByScraping(string query)
         {
-            bool isAlreadySearched = !(_webScrapingProcessesRepository.GetScrapingProcesByGivenQuery(query) == null);
-            if (isAlreadySearched)
+            WebScrapingProces webScrapingProces = _webScrapingProcessesRepository.GetScrapingProcesByGivenQuery(query);
+            if (webScrapingProces != null)
             {
                 throw new Exception($"For given query = {query} - searching has been proceeded");
             }
             else
             {
-                WebScrapingProces webScrapingProces = new()
+                webScrapingProces = new()
                 {
                     Id = Guid.NewGuid(),
                     NameOfMethod = MethodBase.GetCurrentMethod().Name,
@@ -58,11 +58,15 @@ namespace WebScrapingIntegration.API.Services
                     var trNodesOfClub = htmlDocument.DocumentNode.SelectNodes("//table[@class=\"infobox vcard\"]/tbody//tr").Take(6);
                     foreach (var tr in trNodesOfClub)
                     {
-                        if (tr.FirstChild.InnerText == "Full name")
+                        if (htmlDocument.DocumentNode.SelectSingleNode("//*[@id=\"mw-content-text\"]/div[1]/table[1]/caption") != null)
                         {
-                            clubDetails.FullName = ReplaceNonTextWithSpaces(tr.FirstChild.NextSibling.InnerText, false);
+                            clubDetails.FullName = htmlDocument.DocumentNode.SelectSingleNode("//*[@id=\"mw-content-text\"]/div[1]/table[1]/caption").InnerText;
                         }
-                        else if (tr.FirstChild.HasClass("infobox-image"))
+                        else if (htmlDocument.DocumentNode.SelectSingleNode("//*[@id=\"mw-content-text\"]/div[1]/table[2]/caption") != null)
+                        {
+                            clubDetails.FullName = htmlDocument.DocumentNode.SelectSingleNode("//*[@id=\"mw-content-text\"]/div[1]/table[2]/caption").InnerText;
+                        }
+                        if (tr.FirstChild.HasClass("infobox-image"))
                         {
                             clubDetails.LogoUrl = tr.FirstChild.FirstChild.FirstChild.GetAttributeValue("href", "");
                         }
