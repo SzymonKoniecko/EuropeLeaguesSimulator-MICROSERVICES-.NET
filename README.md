@@ -1,0 +1,1 @@
+Not finished project for europe leagues simulator - it's similar to https://github.com/SzymonKoniecko/WorldCup2022-MVC, but this repo has better structure etc. U can see how my skills have skyrocketed in writing .net applications :)
