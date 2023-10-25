@@ -7,7 +7,7 @@ services:
     networks:
     - tmpNetwork
     environment:
-      SA_PASSWORD: Zaq1@wsx 
+      SA_PASSWORD: ${{secrets.DB_SA_PASSWORD}}
       ACCEPT_EULA: Y
     ports:
       - "1433:1433"   # Mapowanie portu kontenera na port hosta
@@ -82,9 +82,9 @@ services:
       context: .
       dockerfile: Services/Logger/Logger.API/Dockerfile
     environment:
-    - DB_HOST=mssql-container
+    - DB_HOST=${{secrets.DB_HOST}}
     - DB_NAME_LOGGER=Logger
-    - DB_SA_PASSWORD=Zaq1@wsx
+    - DB_SA_PASSWORD=${{secrets.DB_SA_PASSWORD}}
     networks:
     - tmpNetwork
   
@@ -99,9 +99,9 @@ services:
       context: .
       dockerfile: Services/DataHub/DataHub.API/Dockerfile
     environment:
-    - DB_HOST=mssql-container
+    - DB_HOST=${{secrets.DB_HOST}}
     - DB_NAME_DATAHUB=DataHub
-    - DB_SA_PASSWORD=Zaq1@wsx
+    - DB_SA_PASSWORD=${{secrets.DB_SA_PASSWORD}}
     networks:
     - tmpNetwork
 
@@ -143,11 +143,11 @@ services:
 ##      - "8080:8080"
 ##    environment:
 ##      - CAMUNDA_BPM_DB_DRIVER=org.sqlserver.jdbc.Driver
-##      - CAMUNDA_BPM_DB_URL=jdbc:sqlserver://mssql-container:1433;databaseName=ProcessManager
+##      - CAMUNDA_BPM_DB_URL=
 #      - CAMUNDA_BPM_DB_USERNAME=sa
-#      - CAMUNDA_BPM_DB_PASSWORD=YourStrongMSSQLPassword
-#      - CAMUNDA_ADMIN_USER=myadmin
-#      - CAMUNDA_ADMIN_PASSWORD=mypassword
+#      - CAMUNDA_BPM_DB_PASSWORD=
+#      - CAMUNDA_ADMIN_USER=
+#      - CAMUNDA_ADMIN_PASSWORD=
 #    depends_on:
 #    - mssql-container
 #    networks:
